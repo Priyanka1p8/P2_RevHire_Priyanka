@@ -1,5 +1,7 @@
 package com.rev.app.entity;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,6 +33,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;
+
 
     private LocalDateTime createdAt = LocalDateTime.now();
 
