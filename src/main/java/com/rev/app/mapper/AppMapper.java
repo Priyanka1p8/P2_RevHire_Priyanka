@@ -81,4 +81,37 @@ public class AppMapper {
         dto.setCreatedAt(note.getCreatedAt());
         return dto;
     }
+
+    public ResumeDTO toResumeDTO(Resume resume) {
+        ResumeDTO dto = new ResumeDTO();
+        dto.setId(resume.getId());
+        dto.setJobSeekerId(resume.getJobSeeker().getId());
+        dto.setObjective(resume.getObjective());
+        dto.setEducation(resume.getEducation());
+        dto.setExperience(resume.getExperience());
+        dto.setSkills(resume.getSkills());
+        dto.setProjects(resume.getProjects());
+        dto.setCertifications(resume.getCertifications());
+        dto.setFilePath(resume.getFilePath());
+        dto.setFileName(resume.getFileName());
+        dto.setSeekerName(resume.getJobSeeker().getName());
+        dto.setSeekerEmail(resume.getJobSeeker().getUser().getEmail());
+        dto.setSeekerPhone(resume.getJobSeeker().getPhone());
+        dto.setSeekerLocation(resume.getJobSeeker().getLocation());
+        dto.setSeekerEmploymentStatus(resume.getJobSeeker().getEmploymentStatus());
+        return dto;
+    }
+
+    public SavedJobDTO toSavedJobDTO(SavedJob savedJob) {
+        SavedJobDTO dto = new SavedJobDTO();
+        dto.setId(savedJob.getId());
+        dto.setJobSeekerId(savedJob.getJobSeeker().getId());
+        dto.setJobId(savedJob.getJob().getId());
+        dto.setJobTitle(savedJob.getJob().getTitle());
+        dto.setCompanyName(savedJob.getJob().getCompany().getName());
+        dto.setLocation(savedJob.getJob().getLocation());
+        dto.setSalaryRange(savedJob.getJob().getSalaryRange());
+        dto.setSavedAt(savedJob.getSavedAt());
+        return dto;
+    }
 }
