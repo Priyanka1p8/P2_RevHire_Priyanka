@@ -12,9 +12,17 @@
         <module name="REVHIRE_P2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="P2_Project_RevHire" target="17" />
+      <module name="P2_Project_RevHire.main" target="17" />
+      <module name="P2_Project_RevHire.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="P2_Project_RevHire" options="-parameters" />
+      <module name="P2_Project_RevHire.main" options="-parameters" />
+      <module name="P2_Project_RevHire.test" options="-parameters" />
       <module name="REVHIRE_P2" options="-parameters" />
     </option>
   </component>
