@@ -11,12 +11,14 @@
         </processorPath>
         <module name="REVHIRE_P2" />
       </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.42/8365263844ebb62398e0dc33057ba10ba472d3b8/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="P2_Project_RevHire.main" />
+      </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="P2_Project_RevHire" target="17" />
-      <module name="P2_Project_RevHire.main" target="17" />
-      <module name="P2_Project_RevHire.test" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
