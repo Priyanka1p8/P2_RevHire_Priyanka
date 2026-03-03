@@ -118,7 +118,7 @@
                     <span class="posted-date-muted">Posted: <span th:text="${job.postedDate}">date</span></span>
                     <div th:if="${job.isApplied}" class="status-badge status-green">Applied</div>
                     <a th:unless="${job.isApplied}" th:href="@{/seeker/jobs/{id}(id=${job.id})}"
-                        class="btn btn-primary btn-sm">View & Apply</a>
+                       class="btn btn-primary btn-sm">View & Apply</a>
                 </div>
             </div>
         </div>
