@@ -9,70 +9,70 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
-            <div class="nav-links">
-                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
-                <a th:href="@{/seeker/jobs}" class="nav-link">Browse Jobs</a>
-                <a th:href="@{/seeker/applications}" class="nav-link">Applications</a>
-                <a th:href="@{/seeker/saved-jobs}" class="nav-link active">Saved Jobs</a>
-                <a th:href="@{/seeker/resume}" class="nav-link">Resume</a>
-                <a th:href="@{/seeker/notifications}" class="nav-link">Notifications</a>
-                <a th:href="@{/seeker/profile}" class="nav-link">Profile</a>
-                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+<nav class="navbar">
+    <div class="container">
+        <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+        <div class="nav-links">
+            <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+            <a th:href="@{/seeker/jobs}" class="nav-link">Browse Jobs</a>
+            <a th:href="@{/seeker/applications}" class="nav-link">Applications</a>
+            <a th:href="@{/seeker/saved-jobs}" class="nav-link active">Saved Jobs</a>
+            <a th:href="@{/seeker/resume}" class="nav-link">Resume</a>
+            <a th:href="@{/seeker/notifications}" class="nav-link">Notifications</a>
+            <a th:href="@{/seeker/profile}" class="nav-link">Profile</a>
+            <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+        </div>
+    </div>
+</nav>
+
+<div class="saved-jobs-container">
+    <div class="saved-jobs-header">
+        <h1>Saved Jobs</h1>
+        <p>Manage the jobs you've bookmarked for later.</p>
+    </div>
+
+    <div th:if="${param.unsaved}" class="alert alert-success">
+        Job removed from saved list.
+    </div>
+
+    <div th:if="${savedJobs == null or savedJobs.isEmpty()}" class="empty-state"
+         style="text-align: center; padding: 4rem 0;">
+        <h3>No saved jobs yet</h3>
+        <p style="color: var(--text-muted); margin-bottom: 2rem;">Go to the job listings and bookmark jobs you're
+            interested in.</p>
+        <a th:href="@{/seeker/jobs}" class="btn btn-primary">Browse Jobs</a>
+    </div>
+
+    <div th:if="${savedJobs != null and !savedJobs.isEmpty()}">
+        <div th:each="savedJob : ${savedJobs}" class="saved-job-card">
+            <div class="card-top-row">
+                <h2 class="job-title" th:text="${savedJob.jobTitle}">Senior Software Engineer</h2>
+                <form th:action="@{/seeker/jobs/{id}/unsave(id=${savedJob.jobId})}" method="post">
+                    <input type="hidden" name="redirect" value="saved" />
+                    <button type="submit" class="unsave-btn">Unsave</button>
+                </form>
             </div>
-        </div>
-    </nav>
 
-    <div class="saved-jobs-container">
-        <div class="saved-jobs-header">
-            <h1>Saved Jobs</h1>
-            <p>Manage the jobs you've bookmarked for later.</p>
-        </div>
+            <span class="company-name" th:text="${savedJob.companyName}">Tech Solutions Corp</span>
 
-        <div th:if="${param.unsaved}" class="alert alert-success">
-            Job removed from saved list.
-        </div>
-
-        <div th:if="${savedJobs == null or savedJobs.isEmpty()}" class="empty-state"
-            style="text-align: center; padding: 4rem 0;">
-            <h3>No saved jobs yet</h3>
-            <p style="color: var(--text-muted); margin-bottom: 2rem;">Go to the job listings and bookmark jobs you're
-                interested in.</p>
-            <a th:href="@{/seeker/jobs}" class="btn btn-primary">Browse Jobs</a>
-        </div>
-
-        <div th:if="${savedJobs != null and !savedJobs.isEmpty()}">
-            <div th:each="savedJob : ${savedJobs}" class="saved-job-card">
-                <div class="card-top-row">
-                    <h2 class="job-title" th:text="${savedJob.jobTitle}">Senior Software Engineer</h2>
-                    <form th:action="@{/seeker/jobs/{id}/unsave(id=${savedJob.jobId})}" method="post">
-                        <input type="hidden" name="redirect" value="saved" />
-                        <button type="submit" class="unsave-btn">Unsave</button>
-                    </form>
-                </div>
-
-                <span class="company-name" th:text="${savedJob.companyName}">Tech Solutions Corp</span>
-
-                <div class="job-meta-line">
-                    <span th:text="${savedJob.location}">Chennai</span>
-                    <span class="separator">•</span>
-                    <span th:if="${savedJob.salaryRange != null}" th:text="${savedJob.salaryRange + ' LPA'}">4.0
+            <div class="job-meta-line">
+                <span th:text="${savedJob.location}">Chennai</span>
+                <span class="separator">•</span>
+                <span th:if="${savedJob.salaryRange != null}" th:text="${savedJob.salaryRange + ' LPA'}">4.0
                         LPA</span>
-                    <span th:unless="${savedJob.salaryRange != null}">Competitive Pay</span>
-                </div>
+                <span th:unless="${savedJob.salaryRange != null}">Competitive Pay</span>
+            </div>
 
-                <div class="card-bottom-row">
+            <div class="card-bottom-row">
                     <span class="saved-on">
                         Saved on: <span th:text="${#temporals.format(savedJob.savedAt, 'dd MMM yyyy')}">28 Feb
                             2026</span>
                     </span>
-                    <a th:href="@{/seeker/jobs/{id}(id=${savedJob.jobId})}" class="btn btn-primary">View & Apply</a>
-                </div>
+                <a th:href="@{/seeker/jobs/{id}(id=${savedJob.jobId})}" class="btn btn-primary">View & Apply</a>
             </div>
         </div>
     </div>
+</div>
 
 </body>
 
