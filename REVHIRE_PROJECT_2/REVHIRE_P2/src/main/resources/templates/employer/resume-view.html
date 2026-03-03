@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Candidate Resume - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/employer/jobs}" class="nav-link">My Jobs</a>
+                <a th:href="@{/employer/jobs/new}" class="nav-link">Post Job</a>
+                <a th:href="@{/employer/profile}" class="nav-link">Profile</a>
+                <a th:href="@{/employer/notifications}" class="nav-link">Notifications</a>
+                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <h1 class="page-title">Candidate Profile & Resume</h1>
+
+        <!-- Applicant Profile Section -->
+        <div class="card" th:object="${resume}" style="margin-bottom: 1.5rem; border-left: 4px solid var(--secondary);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                <div>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem;" th:text="*{seekerName}">Candidate Name</h2>
+                    <p style="color: var(--secondary); font-weight: 600;" th:text="*{seekerEmail}">Email</p>
+                </div>
+                <div style="font-size: 0.9rem;">
+                    <div><strong>Phone:</strong> <span th:text="*{seekerPhone ?: 'N/A'}">Phone</span></div>
+                    <div><strong>Location:</strong> <span th:text="*{seekerLocation ?: 'N/A'}">Location</span></div>
+                    <div><strong>Status:</strong> <span class="job-type-badge"
+                            th:text="*{seekerEmploymentStatus ?: 'N/A'}">Status</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" th:object="${resume}">
+            <div class="resume-section">
+                <h2>Objective</h2>
+                <p th:text="*{objective ?: 'No objective provided.'}" style="white-space: pre-wrap;"></p>
+            </div>
+
+            <div class="resume-section mt-2">
+                <h2>Education</h2>
+                <p th:text="*{education ?: 'No education details provided.'}" style="white-space: pre-wrap;"></p>
+            </div>
+
+            <div class="resume-section mt-2">
+                <h2>Work Experience</h2>
+                <p th:text="*{experience ?: 'No experience details provided.'}" style="white-space: pre-wrap;"></p>
+            </div>
+
+            <div class="resume-section mt-2">
+                <h2>Skills</h2>
+                <p th:text="*{skills ?: 'No skills provided.'}" style="white-space: pre-wrap;"></p>
+            </div>
+
+            <div class="resume-section mt-2">
+                <h2>Projects</h2>
+                <p th:text="*{projects ?: 'No projects provided.'}" style="white-space: pre-wrap;"></p>
+            </div>
+
+            <div class="resume-section mt-2">
+                <h2>Certifications</h2>
+                <p th:text="*{certifications ?: 'No certifications provided.'}" style="white-space: pre-wrap;"></p>
+            </div>
+
+            <div th:if="*{fileName != null}" class="resume-section mt-2"
+                style="padding: 1rem; background: var(--surface-alt); border-radius: 8px;">
+                <h2>Attached Document</h2>
+                <p>Candidate has uploaded a file: <strong th:text="*{fileName}">resume.pdf</strong></p>
+                <a th:href="@{/seeker/resume/download(id=*{jobSeekerId})}" class="btn btn-secondary btn-sm">Download
+                    PDF/DOCX</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

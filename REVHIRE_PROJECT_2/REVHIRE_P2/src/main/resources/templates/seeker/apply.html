@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${'Apply for ' + job.title + ' | RevHire'}">Apply for Job - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/seeker/jobs}" class="nav-link">Browse Jobs</a>
+                <a th:href="@{/seeker/applications}" class="nav-link">Applications</a>
+                <a th:href="@{/seeker/saved-jobs}" class="nav-link">Saved Jobs</a>
+                <a th:href="@{/seeker/resume}" class="nav-link">Resume</a>
+                <a th:href="@{/seeker/profile}" class="nav-link">Profile</a>
+                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="apply-page-container">
+        <div class="apply-header-section">
+            <h1>Apply for this Job</h1>
+            <p>Fill in the details below to submit your application for <strong th:text="${job.title}">Job
+                    Title</strong> at <strong th:text="${job.companyName}">Company</strong>.</p>
+        </div>
+
+        <div class="apply-form-card">
+            <form th:action="@{/seeker/apply}" method="post">
+                <input type="hidden" name="jobId" th:value="${job.id}" />
+                <input type="hidden" name="jobSeekerId" th:value="${seekerId}" />
+
+
+                <div class="form-section">
+                    <h2 class="section-title">Resume Selection</h2>
+
+                    <div th:if="${resume != null}" class="resume-selection-block">
+                        <input type="hidden" name="resumeId" th:value="${resume.id}" />
+                        <div class="resume-display-info">
+                            <span class="resume-label">Using your saved resume</span>
+                            <strong class="resume-name" th:text="${resume.fileName ?: 'Standard Resume'}">Standard
+                                Resume</strong>
+                        </div>
+                        <a th:href="@{/seeker/resume}" class="change-resume-link">Change Resume</a>
+                    </div>
+
+                    <div th:unless="${resume != null}" class="alert alert-error" style="border-radius: 8px;">
+                        No resume found. Please <a th:href="@{/seeker/resume}"
+                            style="font-weight: 700; text-decoration: underline;">create or upload a resume</a> before
+                        applying.
+                    </div>
+                </div>
+
+
+                <div class="form-section">
+                    <h2 class="section-title">Cover Letter (Optional)</h2>
+                    <textarea id="coverLetter" name="coverLetter" class="refined-textarea" rows="8"
+                        placeholder="Tell the employer why you are a great fit for this role..."></textarea>
+                </div>
+
+
+                <div class="apply-actions">
+                    <button type="submit" class="btn btn-primary btn-large btn-block" th:disabled="${resume == null}">
+                        Apply for Job Now
+                    </button>
+                    <a th:href="@{/seeker/jobs/{id}(id=${job.id})}" class="btn btn-outline btn-block"
+                        style="margin-top: 1rem; border: none;">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

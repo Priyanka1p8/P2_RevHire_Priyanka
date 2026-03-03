@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RevHire - Find Your Dream Job</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-name">RevHire</span>
+            </div>
+            <div class="nav-links">
+
+                <th:block th:if="${!#authorization.expression('isAuthenticated()')}">
+                    <a th:href="@{/login}" class="btn btn-outline">Login</a>
+                    <a th:href="@{/register}" class="btn btn-primary">Register</a>
+                </th:block>
+
+
+                <th:block th:if="${#authorization.expression('isAuthenticated()')}">
+                    <a th:href="@{/seeker/jobs}" class="nav-link">Browse Jobs</a>
+
+
+                    <th:block th:if="${#authorization.expression('hasAuthority(''ROLE_JOB_SEEKER'')')}">
+                        <a th:href="@{/seeker/applications}" class="nav-link">Applications</a>
+                        <a th:href="@{/seeker/resume}" class="nav-link">Resume</a>
+                        <a th:href="@{/seeker/notifications}" class="nav-link">Notifications</a>
+                    </th:block>
+
+
+                    <th:block th:if="${#authorization.expression('hasAuthority(''ROLE_EMPLOYER'')')}">
+                        <a th:href="@{/employer/jobs}" class="nav-link">My Jobs</a>
+                        <a th:href="@{/employer/jobs/new}" class="nav-link">Post Job</a>
+                        <a th:href="@{/employer/notifications}" class="nav-link">Notifications</a>
+                    </th:block>
+
+                    <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                    <a th:href="@{/logout}" class="btn btn-outline" style="margin-left: 10px;">Logout</a>
+                </th:block>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Find Your <span class="highlight">Dream Job</span> Today</h1>
+                <p class="hero-sub">Connect with top employers. Build your career with RevHire.</p>
+                <div class="hero-actions">
+                    <a th:href="@{/register}" class="btn btn-primary btn-large">Get Started</a>
+                    <a th:href="@{/seeker/jobs}" class="btn btn-outline btn-large">Browse Jobs</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><strong>500+</strong><span>Jobs Posted</span></div>
+                    <div class="stat"><strong>200+</strong><span>Companies</span></div>
+                    <div class="stat"><strong>1000+</strong><span>Job Seekers</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose RevHire?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Smart Job Matching</h3>
+                    <p>Find jobs that match your skills and experience level.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Resume Builder</h3>
+                    <p>Create a professional resume directly on the platform.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Real-time Notifications</h3>
+                    <p>Stay updated on application status changes instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Top Companies</h3>
+                    <p>Access opportunities from leading companies across industries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 RevHire. All rights reserved.</p>
+        </div>
+    </footer>
+    <script th:src="@{/js/app.js}"></script>
+</body>
+
+</html>

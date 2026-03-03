@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Employer Dashboard - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link active">Dashboard</a>
+                <a th:href="@{/employer/jobs}" class="nav-link">My Jobs</a>
+                <a th:href="@{/employer/jobs/new}" class="nav-link">Post Job</a>
+                <a th:href="@{/employer/profile}" class="nav-link">Profile</a>
+                <a th:href="@{/employer/notifications}" class="nav-link">Notifications</a>
+                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="welcome-banner">
+            <h1>Welcome, <span
+                    th:text="${employer != null && employer.contactPerson != null ? employer.contactPerson : 'Employer'}">Employer</span>!
+            </h1>
+            <p>Manage your job postings and find top talent</p>
+        </div>
+
+
+
+        <div class="stats-row"
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; margin-bottom: 2rem;">
+            <div class="card" style="text-align: center; margin-bottom: 0;">
+                <h4
+                    style="color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                    Total Jobs</h4>
+                <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary);" th:text="${totalJobs}">0</div>
+            </div>
+            <div class="card" style="text-align: center; margin-bottom: 0;">
+                <h4
+                    style="color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                    Active Jobs</h4>
+                <div style="font-size: 2.5rem; font-weight: 700; color: var(--success);" th:text="${activeJobs}">0</div>
+            </div>
+            <div class="card" style="text-align: center; margin-bottom: 0;">
+                <h4
+                    style="color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                    Applications</h4>
+                <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary);" th:text="${totalApplications}">
+                    0</div>
+            </div>
+            <div class="card" style="text-align: center; margin-bottom: 0;">
+                <h4
+                    style="color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                    Pending Review</h4>
+                <div style="font-size: 2.5rem; font-weight: 700; color: var(--warning);" th:text="${pendingReviews}">0
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

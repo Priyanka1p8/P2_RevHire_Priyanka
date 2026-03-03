@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Seeker Dashboard - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="nav-brand">
+                <a th:href="@{/}" style="color: var(--primary); font-weight: 800; font-size: 1.5rem;">RevHire</a>
+            </div>
+
+            <div class="nav-links" style="display: flex; gap: 2rem;">
+                <a th:href="@{/dashboard}" class="nav-link active">Dashboard</a>
+                <a th:href="@{/seeker/jobs}" class="nav-link">Browse Jobs</a>
+                <a th:href="@{/seeker/applications}" class="nav-link">Applications</a>
+                <a th:href="@{/seeker/saved-jobs}" class="nav-link">Saved Jobs</a>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+                <a th:href="@{/seeker/notifications}" class="nav-link"
+                    style="color: var(--text-main); font-weight: 600;">
+                    Notifications (<span
+                        th:text="${unreadNotificationCount != null ? unreadNotificationCount : '0'}">0</span>)
+                </a>
+
+                <div class="user-dropdown">
+                    <div class="user-name-wrapper">
+                        <span th:text="${seeker != null ? seeker.name : 'Job Seeker'}">User Name</span>
+                        <small style="font-size: 0.6rem; vertical-align: middle; margin-left: 2px;">▼</small>
+                    </div>
+                    <div class="dropdown-content">
+                        <a th:href="@{/seeker/profile}">My Profile</a>
+                        <a th:href="@{/logout}">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container">
+
+        <div class="welcome-banner">
+            <h1>Welcome back, <span th:text="${seeker != null ? seeker.name : 'Job Seeker'}">User</span>!</h1>
+            <p>Your career journey at a glance.</p>
+        </div>
+
+
+        <div class="dashboard-overview">
+            <div class="overview-card">
+                <span class="overview-count" th:text="${applicationCount != null ? applicationCount : '0'}">12</span>
+                <span class="overview-title">Applications</span>
+            </div>
+            <div class="overview-card">
+                <span class="overview-count" th:text="${savedJobCount != null ? savedJobCount : '0'}">5</span>
+                <span class="overview-title">Saved Jobs</span>
+            </div>
+            <div class="overview-card">
+                <span class="overview-count"
+                    th:text="${unreadNotificationCount != null ? unreadNotificationCount : '0'}">3</span>
+                <span class="overview-title">Notifications</span>
+            </div>
+        </div>
+
+
+        <div class="dashboard-section" style="margin-bottom: 4rem;">
+            <div class="job-section-header">
+                <h2 style="margin-bottom: 0;">Recommended for You</h2>
+                <a th:href="@{/seeker/jobs}" class="btn btn-outline btn-sm">View All Jobs</a>
+            </div>
+
+            <div th:if="${recommendedJobs == null or recommendedJobs.isEmpty()}" class="card"
+                style="text-align: center; padding: 3rem;">
+                <p style="color: var(--text-muted);">No recommendations yet. Complete your profile to get matched.</p>
+            </div>
+
+            <div class="recommended-grid" th:if="${recommendedJobs != null and !recommendedJobs.isEmpty()}">
+                <div th:each="job : ${recommendedJobs}" class="premium-job-card">
+                    <h3 th:text="${job.title}" style="font-weight: 700; margin-bottom: 0.25rem;">Software Engineer</h3>
+                    <p class="application-company" th:text="${job.companyName}">Tech Corp</p>
+
+                    <div style="margin: 1rem 0;">
+                        <span class="job-info-item" th:text="${job.location}">Location</span>
+                        <span class="job-info-item"><span th:text="${job.experienceRequired}">2</span>+ Years
+                            Experience</span>
+                        <span class="job-info-price">
+                            <span th:text="${job.salaryRange}"></span> LPA
+                        </span>
+                    </div>
+
+                    <div class="application-meta">
+                        Posted: <span th:text="${#temporals.format(job.postedDate, 'dd MMM yyyy')}">15 Oct 2023</span>
+                    </div>
+
+                    <div class="job-actions">
+                        <a th:href="@{/seeker/jobs/{id}(id=${job.id})}" class="btn btn-primary btn-sm">View Details</a>
+                        <form th:action="@{/seeker/jobs/{id}/save(id=${job.id})}" method="POST"
+                            style="text-align: center;">
+                            <button type="submit" class="save-job-link">Save Job</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 RevHire. No icons, just excellence.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Manage Jobs - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/employer/jobs}" class="nav-link active">My Jobs</a>
+                <a th:href="@{/employer/jobs/new}" class="nav-link">Post Job</a>
+                <a th:href="@{/employer/profile}" class="nav-link">Profile</a>
+                <a th:href="@{/employer/notifications}" class="nav-link">Notifications</a>
+                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <div class="page-header-row"
+            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <h1 class="page-title">My Job Postings</h1>
+            <a th:href="@{/employer/jobs/new}" class="btn btn-primary">Post New Job</a>
+        </div>
+
+
+        <div class="stats-row"
+            style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 2rem;">
+            <div class="card" style="padding: 1.5rem; text-align: center; margin-bottom: 0;">
+                <h4 style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Total Jobs</h4>
+                <div style="font-size: 1.75rem; font-weight: 700;" th:text="${totalJobs}">0</div>
+            </div>
+            <div class="card" style="padding: 1.5rem; text-align: center; margin-bottom: 0;">
+                <h4 style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Active</h4>
+                <div style="font-size: 1.75rem; font-weight: 700; color: var(--success);" th:text="${activeJobs}">0
+                </div>
+            </div>
+            <div class="card" style="padding: 1.5rem; text-align: center; margin-bottom: 0;">
+                <h4 style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Closed</h4>
+                <div style="font-size: 1.75rem; font-weight: 700; color: var(--secondary);" th:text="${closedJobs}">0
+                </div>
+            </div>
+            <div class="card" style="padding: 1.5rem; text-align: center; margin-bottom: 0;">
+                <h4 style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Filled</h4>
+                <div style="font-size: 1.75rem; font-weight: 700; color: var(--primary);" th:text="${filledJobs}">0
+                </div>
+            </div>
+        </div>
+
+
+        <div th:if="${param.created}" class="alert alert-success">Job created successfully!</div>
+        <div th:if="${param.updated}" class="alert alert-success">Job updated!</div>
+        <div th:if="${param.closed}" class="alert alert-success">Job closed.</div>
+        <div th:if="${param.deleted}" class="alert alert-success">Job deleted.</div>
+
+
+        <form th:action="@{/employer/jobs}" method="get" class="search-bar" style="margin-bottom: 2rem;">
+            <input type="text" name="keyword" th:value="${keyword}" class="search-input"
+                placeholder="Search by job title or location..." />
+            <select name="status" class="form-control" style="width: 200px;">
+                <option value="">All Statuses</option>
+                <option value="ACTIVE" th:selected="${status == 'ACTIVE'}">Active</option>
+                <option value="CLOSED" th:selected="${status == 'CLOSED'}">Closed</option>
+                <option value="FILLED" th:selected="${status == 'FILLED'}">Filled</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Filter</button>
+            <a th:href="@{/employer/jobs}" class="btn btn-secondary">Clear</a>
+        </form>
+
+        <div th:if="${jobs.isEmpty()}" class="empty-state card" style="text-align: center; padding: 4rem;">
+            <p style="color: var(--text-muted); font-size: 1.125rem;">No job postings found matching your criteria.</p>
+            <a th:href="@{/employer/jobs/new}" class="btn btn-primary" style="margin-top: 1.5rem;">Post Your First
+                Job</a>
+        </div>
+
+
+        <div class="table-container" th:if="${!jobs.isEmpty()}">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Location</th>
+                        <th>Job Type</th>
+                        <th>Status</th>
+                        <th>Apps</th>
+                        <th>Posted Date</th>
+                        <th style="text-align: right;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="job : ${jobs}">
+                        <td>
+                            <div style="font-weight: 600; color: var(--text-main);" th:text="${job.title}">Software
+                                Engineer</div>
+                        </td>
+                        <td th:text="${job.location}">Bangalore</td>
+                        <td th:text="${job.jobType}">Full-time</td>
+                        <td>
+                            <span class="status-badge" th:classappend="${job.status == 'FILLED' ? 'status-red' : 
+                                              job.isClosed ? 'status-grey' : 'status-green'}"
+                                th:text="${job.status == 'FILLED' ? 'Filled' : (job.isClosed ? 'Closed' : 'Active')}">Active</span>
+                        </td>
+                        <td>
+                            <span style="font-weight: 700; color: var(--primary);"
+                                th:text="${job.applicantCount}">0</span>
+                        </td>
+                        <td th:text="${job.postedDate}">2024-03-20</td>
+                        <td style="text-align: right;">
+                            <div style="display: flex; gap: 0.5rem; justify-content: flex-end;">
+                                <a th:href="@{/employer/jobs/{id}/applicants(id=${job.id})}"
+                                    class="btn btn-outline btn-sm" title="View Applicants">Applicants</a>
+                                <a th:href="@{/employer/jobs/{id}/edit(id=${job.id})}" class="btn btn-outline btn-sm"
+                                    title="Edit Job">Edit</a>
+
+
+                                <form th:if="${!job.isClosed}"
+                                    th:action="@{/employer/jobs/{id}/mark-filled(id=${job.id})}" method="post"
+                                    style="display:inline;">
+                                    <button type="submit" class="btn btn-success btn-sm"
+                                        title="Mark as Filled">Fill</button>
+                                </form>
+                                <form th:if="${!job.isClosed}" th:action="@{/employer/jobs/{id}/close(id=${job.id})}"
+                                    method="post" style="display:inline;">
+                                    <button type="submit" class="btn btn-warning btn-sm"
+                                        title="Close Job">Close</button>
+                                </form>
+                                <form th:if="${job.isClosed}" th:action="@{/employer/jobs/{id}/reopen(id=${job.id})}"
+                                    method="post" style="display:inline;">
+                                    <button type="submit" class="btn btn-outline btn-sm"
+                                        title="Reopen Job">Reopen</button>
+                                </form>
+
+                                <form th:action="@{/employer/jobs/{id}/delete(id=${job.id})}" method="post"
+                                    style="display:inline;" onsubmit="return confirm('Delete this job posting?')">
+                                    <button type="submit" class="btn btn-danger btn-sm"
+                                        title="Delete Job">Delete</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

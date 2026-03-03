@@ -1,0 +1,649 @@
+2026-02-22 23:50:56 [main] INFO  com.rev.app.RevhireP2ApplicationTests - Starting RevhireP2ApplicationTests using Java 21.0.9 on DESKTOP-M0EO5OJ with PID 11900 (started by Dell in E:\p2222222222\REVHIRE_P2)
+2026-02-22 23:50:56 [main] DEBUG com.rev.app.RevhireP2ApplicationTests - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-22 23:50:56 [main] INFO  com.rev.app.RevhireP2ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-02-22 23:51:19 [main] INFO  com.rev.app.RevhireP2ApplicationTests - Started RevhireP2ApplicationTests in 23.545 seconds (JVM running for 28.739)
+2026-02-24 01:20:13 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 12220 (E:\p2222222222\REVHIRE_P2\target\classes started by Dell in E:\p2222222222\REVHIRE_P2)
+2026-02-24 01:20:13 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-24 01:20:13 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-24 01:22:22 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 128.835 seconds (JVM running for 131.911)
+2026-02-24 10:56:50 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 4616 (E:\p2222222222\REVHIRE_P2\target\classes started by Dell in E:\p2222222222\REVHIRE_P2)
+2026-02-24 10:56:51 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-24 10:56:51 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-24 11:06:29 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 18132 (E:\p2222222222\REVHIRE_P2\target\classes started by Dell in E:\p2222222222\REVHIRE_P2)
+2026-02-24 11:06:29 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-24 11:06:29 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-24 11:06:53 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 24.742 seconds (JVM running for 38.201)
+2026-02-24 11:18:38 [http-nio-8080-exec-9] INFO  com.rev.app.controller.UserController - Registering new user: priya@gmail.com
+2026-02-24 11:21:19 [http-nio-8080-exec-3] INFO  com.rev.app.controller.JobSeekerController - Seeker 1 applied to job 1
+2026-02-24 11:27:34 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 8616 (E:\p2222222222\REVHIRE_P2\target\classes started by Dell in E:\p2222222222\REVHIRE_P2)
+2026-02-24 11:27:34 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-24 11:27:34 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-24 11:27:46 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 12.761 seconds (JVM running for 27.108)
+2026-02-24 11:40:33 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 17860 (E:\p2222222222\REVHIRE_P2\target\classes started by Dell in E:\p2222222222\REVHIRE_P2)
+2026-02-24 11:40:33 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-24 11:40:33 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-24 11:40:49 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 17.411 seconds (JVM running for 20.376)
+2026-02-24 15:10:24 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: null
+2026-02-24 15:10:25 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to REJECTED
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to REJECTED
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Found another opportunity
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Got a better offer
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-02-24 15:10:25 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to SHORTLISTED
+2026-02-24 15:10:25 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to SHORTLISTED
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: null
+2026-02-24 15:15:11 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to REJECTED
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to REJECTED
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Found another opportunity
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Got a better offer
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-02-24 15:15:11 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to SHORTLISTED
+2026-02-24 15:15:11 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to SHORTLISTED
+2026-02-24 18:31:33 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: null
+2026-02-24 18:31:33 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-02-24 18:31:33 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-02-24 18:31:33 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to REJECTED
+2026-02-24 18:31:33 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to REJECTED
+2026-02-24 18:31:33 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Found another opportunity
+2026-02-24 18:31:33 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Got a better offer
+2026-02-24 18:31:33 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-02-24 18:31:34 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to SHORTLISTED
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to SHORTLISTED
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: employer@revhire.com
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: employer@revhire.com (role: EMPLOYER)
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: unknown@revhire.com
+2026-02-24 18:31:34 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed — no account found for email: unknown@revhire.com
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: seeker@revhire.com
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: seeker@revhire.com (role: JOB_SEEKER)
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: seeker@revhire.com
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: seeker@revhire.com (role: JOB_SEEKER)
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: employer@revhire.com and role: EMPLOYER
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-02-24 18:31:34 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: null
+2026-02-24 18:31:57 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to REJECTED
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to REJECTED
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Found another opportunity
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Got a better offer
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-02-24 18:31:57 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to SHORTLISTED
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to SHORTLISTED
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: employer@revhire.com
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: employer@revhire.com (role: EMPLOYER)
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: unknown@revhire.com
+2026-02-24 18:31:57 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed — no account found for email: unknown@revhire.com
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: seeker@revhire.com
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: seeker@revhire.com (role: JOB_SEEKER)
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: seeker@revhire.com
+2026-02-24 18:31:57 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: seeker@revhire.com (role: JOB_SEEKER)
+2026-02-24 18:31:58 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-02-24 18:31:58 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-02-24 18:31:58 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-02-24 18:31:58 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-02-24 18:31:58 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: employer@revhire.com and role: EMPLOYER
+2026-02-24 18:31:58 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-02-24 18:31:58 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-02-24 19:59:23 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 12688 (E:\p2222222222\REVHIRE_P2\target\classes started by Dell in E:\p2222222222\REVHIRE_P2)
+2026-02-24 19:59:23 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-24 19:59:23 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-24 20:08:49 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 6428 (E:\p2222222222\REVHIRE_P2\target\classes started by Dell in E:\p2222222222\REVHIRE_P2)
+2026-02-24 20:08:49 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-24 20:08:49 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-24 20:12:22 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 16560 (E:\p2222222222\REVHIRE_P2\target\classes started by Dell in E:\p2222222222\REVHIRE_P2)
+2026-02-24 20:12:22 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-24 20:12:22 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-24 22:52:18 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2980 (E:\p2222222222\REVHIRE_P2\target\classes started by Dell in E:\p2222222222\REVHIRE_P2)
+2026-02-24 22:52:19 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-24 22:52:19 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-24 22:52:35 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 16.758 seconds (JVM running for 19.473)
+2026-02-24 23:06:05 [http-nio-8080-exec-10] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: priya@test.com and role: JOB_SEEKER
+2026-02-24 23:06:15 [http-nio-8080-exec-10] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: priya@test.com
+2026-02-25 18:44:09 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-02-25 18:44:09 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-02-25 18:44:09 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: hr@techcorp.com and role: EMPLOYER
+2026-02-25 18:44:09 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: hr@techcorp.com with company: TechCorp Ltd
+2026-02-25 18:44:09 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-02-25 18:44:09 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-02-25 18:44:09 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-02-25 18:44:09 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-02-26 11:56:50 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 11720 (E:\REVHIRE_PROJECT_2\REVHIRE_P2\target\classes started by Dell in E:\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-02-26 11:56:50 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-26 11:56:50 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 11:57:49 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 6928 (E:\REVHIRE_PROJECT_2\REVHIRE_P2\target\classes started by Dell in E:\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-02-26 11:57:49 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-26 11:57:49 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 11:58:03 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 13.911 seconds (JVM running for 15.819)
+2026-02-26 12:03:31 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 6928 (E:\REVHIRE_PROJECT_2\REVHIRE_P2\target\classes started by Dell in E:\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-02-26 12:03:31 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-26 12:03:31 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 12:03:39 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 8.168 seconds (JVM running for 352.047)
+2026-02-26 12:03:41 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 6928 (E:\REVHIRE_PROJECT_2\REVHIRE_P2\target\classes started by Dell in E:\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-02-26 12:03:41 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-26 12:03:41 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 12:03:45 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 3.961 seconds (JVM running for 358.238)
+2026-02-26 12:03:55 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 6928 (E:\REVHIRE_PROJECT_2\REVHIRE_P2\target\classes started by Dell in E:\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-02-26 12:03:55 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-26 12:03:55 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 12:04:08 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 12.623 seconds (JVM running for 381.13)
+2026-02-26 12:13:14 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 6928 (E:\REVHIRE_PROJECT_2\REVHIRE_P2\target\classes started by Dell in E:\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-02-26 12:13:14 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-26 12:13:14 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 12:18:29 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 323.153 seconds (JVM running for 1242.078)
+2026-02-26 12:18:47 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 6928 (E:\REVHIRE_PROJECT_2\REVHIRE_P2\target\classes started by Dell in E:\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-02-26 12:18:47 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-26 12:18:47 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-26 12:19:10 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 25.565 seconds (JVM running for 1282.676)
+2026-02-27 22:03:55 [restartedMain] INFO  com.rev.app.RevhireP2Application - Starting RevhireP2Application using Java 17.0.17 on DESKTOP-M0EO5OJ with PID 20756 (E:\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2\target\classes started by Dell in E:\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-02-27 22:03:55 [restartedMain] DEBUG com.rev.app.RevhireP2Application - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-02-27 22:03:55 [restartedMain] INFO  com.rev.app.RevhireP2Application - No active profile set, falling back to 1 default profile: "default"
+2026-02-27 22:04:09 [restartedMain] INFO  com.rev.app.RevhireP2Application - Started RevhireP2Application in 15.431 seconds (JVM running for 17.678)
+2026-03-01 12:28:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: null
+2026-03-01 12:28:53 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-03-01 12:28:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-03-01 12:28:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Found another opportunity
+2026-03-01 12:28:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Got a better offer
+2026-03-01 12:28:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-03-01 12:28:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-03-01 12:28:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-03-01 12:28:53 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-03-01 12:28:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-03-01 12:28:54 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-03-01 12:38:44 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-03-01 12:38:44 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-03-01 12:38:44 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: hr@techcorp.com and role: EMPLOYER
+2026-03-01 12:38:44 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: hr@techcorp.com with company: TechCorp Ltd
+2026-03-01 12:38:44 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-03-01 12:38:44 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-03-01 12:38:44 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-03-01 12:38:44 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-03-01 12:46:17 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: employer@revhire.com
+2026-03-01 12:46:17 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: employer@revhire.com (role: EMPLOYER)
+2026-03-01 12:46:17 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: unknown@revhire.com
+2026-03-01 12:46:17 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed â€” no account found for email: unknown@revhire.com
+2026-03-01 12:46:17 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: seeker@revhire.com
+2026-03-01 12:46:17 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: seeker@revhire.com (role: JOB_SEEKER)
+2026-03-01 12:46:17 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: seeker@revhire.com
+2026-03-01 12:46:17 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: seeker@revhire.com (role: JOB_SEEKER)
+2026-03-01 12:46:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: null
+2026-03-01 12:46:57 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-03-01 12:46:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-03-01 12:46:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Found another opportunity
+2026-03-01 12:46:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Got a better offer
+2026-03-01 12:46:57 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-03-01 12:46:58 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-03-01 12:46:58 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-03-01 12:46:58 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-03-01 12:46:58 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-03-01 12:46:58 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: null
+2026-03-01 13:09:03 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to REJECTED
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to REJECTED
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Found another opportunity
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Got a better offer
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-03-01 13:09:03 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to SHORTLISTED
+2026-03-01 13:09:03 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to SHORTLISTED
+2026-03-02 22:31:22 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: employer@revhire.com
+2026-03-02 22:31:22 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: employer@revhire.com (role: EMPLOYER)
+2026-03-02 22:31:22 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: unknown@revhire.com
+2026-03-02 22:31:22 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed â€” no account found for email: unknown@revhire.com
+2026-03-02 22:31:22 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: seeker@revhire.com
+2026-03-02 22:31:22 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: seeker@revhire.com (role: JOB_SEEKER)
+2026-03-02 22:31:22 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: seeker@revhire.com
+2026-03-02 22:31:22 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: seeker@revhire.com (role: JOB_SEEKER)
+2026-03-02 22:32:44 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-03-02 22:32:44 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-03-02 22:32:44 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: hr@techcorp.com and role: EMPLOYER
+2026-03-02 22:32:44 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: hr@techcorp.com with company: TechCorp Ltd
+2026-03-02 22:32:44 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-03-02 22:32:44 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-03-02 22:32:44 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+2026-03-02 22:32:44 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+2026-03-03 10:14:23 [main] INFO  com.rev.app.controller.EmployerController - Employer 1 updated application 10 to status SHORTLISTED
+2026-03-03 18:14:22 [main] INFO  com.rev.app.repository.ApplicationRepositoryTest - Starting ApplicationRepositoryTest using Java 17.0.18 on GeeshithaGaade with PID 12040 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:14:22 [main] DEBUG com.rev.app.repository.ApplicationRepositoryTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:14:22 [main] INFO  com.rev.app.repository.ApplicationRepositoryTest - The following 1 profile is active: "test"
+2026-03-03 18:14:25 [main] INFO  com.rev.app.repository.ApplicationRepositoryTest - Started ApplicationRepositoryTest in 3.163 seconds (JVM running for 4.89)
+2026-03-03 18:14:25 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Starting ApplicationRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 12040 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:14:25 [main] DEBUG com.rev.app.rest.ApplicationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:14:25 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:14:27 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Started ApplicationRestControllerTest in 1.246 seconds (JVM running for 6.633)
+2026-03-03 18:14:27 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Starting DashboardRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 12040 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:14:27 [main] DEBUG com.rev.app.rest.DashboardRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:14:27 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:14:27 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Started DashboardRestControllerTest in 0.523 seconds (JVM running for 7.351)
+2026-03-03 18:14:27 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Starting EmployerRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 12040 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:14:27 [main] DEBUG com.rev.app.rest.EmployerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:14:27 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:14:28 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Started EmployerRestControllerTest in 0.667 seconds (JVM running for 8.039)
+2026-03-03 18:14:28 [main] INFO  com.rev.app.rest.JobRestControllerTest - Starting JobRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 12040 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:14:28 [main] DEBUG com.rev.app.rest.JobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:14:28 [main] INFO  com.rev.app.rest.JobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:14:29 [main] INFO  com.rev.app.rest.JobRestControllerTest - Started JobRestControllerTest in 0.518 seconds (JVM running for 8.592)
+2026-03-03 18:14:29 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Starting JobSeekerRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 12040 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:14:29 [main] DEBUG com.rev.app.rest.JobSeekerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:14:29 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:14:29 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Started JobSeekerRestControllerTest in 0.561 seconds (JVM running for 9.184)
+2026-03-03 18:14:29 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Starting NotificationRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 12040 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:14:29 [main] DEBUG com.rev.app.rest.NotificationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:14:29 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:14:30 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Started NotificationRestControllerTest in 0.495 seconds (JVM running for 9.704)
+2026-03-03 18:14:30 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Starting ResumeRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 12040 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:14:30 [main] DEBUG com.rev.app.rest.ResumeRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:14:30 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:14:30 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Started ResumeRestControllerTest in 0.569 seconds (JVM running for 10.308)
+2026-03-03 18:14:30 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Starting SavedJobRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 12040 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:14:30 [main] DEBUG com.rev.app.rest.SavedJobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:14:30 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:14:31 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Started SavedJobRestControllerTest in 0.525 seconds (JVM running for 10.874)
+2026-03-03 18:14:31 [main] INFO  com.rev.app.rest.UserRestControllerTest - Starting UserRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 12040 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:14:31 [main] DEBUG com.rev.app.rest.UserRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:14:31 [main] INFO  com.rev.app.rest.UserRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:14:31 [main] INFO  com.rev.app.rest.UserRestControllerTest - Started UserRestControllerTest in 0.503 seconds (JVM running for 11.402)
+2026-03-03 18:14:32 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=1 job=1 status=APPLIED
+2026-03-03 18:14:32 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker null attempted duplicate application for job null
+2026-03-03 18:14:32 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: test@test.com
+2026-03-03 18:14:32 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: test@test.com (role: JOB_SEEKER)
+2026-03-03 18:14:32 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: non@test.com
+2026-03-03 18:14:32 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed — no account found for email: non@test.com
+2026-03-03 18:14:32 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: test@test.com and role: JOB_SEEKER
+2026-03-03 18:14:32 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: test@test.com
+2026-03-03 18:14:32 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: emp@test.com and role: EMPLOYER
+2026-03-03 18:14:32 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: emp@test.com with company: Tech Corp
+2026-03-03 18:18:55 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - Starting ApplicationNoteRepositoryTest using Java 17.0.18 on GeeshithaGaade with PID 6872 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:18:55 [main] DEBUG com.rev.app.repository.ApplicationNoteRepositoryTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:18:55 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - The following 1 profile is active: "test"
+2026-03-03 18:18:58 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - Started ApplicationNoteRepositoryTest in 3.234 seconds (JVM running for 4.655)
+2026-03-03 18:18:58 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Starting ApplicationRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 6872 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:18:58 [main] DEBUG com.rev.app.rest.ApplicationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:18:58 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:19:00 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Started ApplicationRestControllerTest in 1.247 seconds (JVM running for 6.611)
+2026-03-03 18:19:00 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Starting DashboardRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 6872 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:19:00 [main] DEBUG com.rev.app.rest.DashboardRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:19:00 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:19:01 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Started DashboardRestControllerTest in 0.628 seconds (JVM running for 7.427)
+2026-03-03 18:19:01 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Starting EmployerRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 6872 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:19:01 [main] DEBUG com.rev.app.rest.EmployerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:19:01 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:19:01 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Started EmployerRestControllerTest in 0.472 seconds (JVM running for 7.918)
+2026-03-03 18:19:01 [main] INFO  com.rev.app.rest.JobRestControllerTest - Starting JobRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 6872 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:19:01 [main] DEBUG com.rev.app.rest.JobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:19:01 [main] INFO  com.rev.app.rest.JobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:19:01 [main] INFO  com.rev.app.rest.JobRestControllerTest - Started JobRestControllerTest in 0.458 seconds (JVM running for 8.403)
+2026-03-03 18:19:02 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Starting JobSeekerRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 6872 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:19:02 [main] DEBUG com.rev.app.rest.JobSeekerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:19:02 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:19:02 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Started JobSeekerRestControllerTest in 0.476 seconds (JVM running for 8.913)
+2026-03-03 18:19:02 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Starting NotificationRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 6872 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:19:02 [main] DEBUG com.rev.app.rest.NotificationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:19:02 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:19:02 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Started NotificationRestControllerTest in 0.474 seconds (JVM running for 9.417)
+2026-03-03 18:19:03 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Starting ResumeRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 6872 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:19:03 [main] DEBUG com.rev.app.rest.ResumeRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:19:03 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:19:03 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Started ResumeRestControllerTest in 0.481 seconds (JVM running for 9.929)
+2026-03-03 18:19:03 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Starting SavedJobRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 6872 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:19:03 [main] DEBUG com.rev.app.rest.SavedJobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:19:03 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:19:03 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Started SavedJobRestControllerTest in 0.405 seconds (JVM running for 10.368)
+2026-03-03 18:19:03 [main] INFO  com.rev.app.rest.UserRestControllerTest - Starting UserRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 6872 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:19:03 [main] DEBUG com.rev.app.rest.UserRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:19:03 [main] INFO  com.rev.app.rest.UserRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:19:04 [main] INFO  com.rev.app.rest.UserRestControllerTest - Started UserRestControllerTest in 0.455 seconds (JVM running for 10.843)
+2026-03-03 18:19:04 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=1 job=1 status=APPLIED
+2026-03-03 18:19:04 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker null attempted duplicate application for job null
+2026-03-03 18:19:04 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: test@test.com
+2026-03-03 18:19:04 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: test@test.com (role: JOB_SEEKER)
+2026-03-03 18:19:04 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: non@test.com
+2026-03-03 18:19:04 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed — no account found for email: non@test.com
+2026-03-03 18:19:04 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: test@test.com and role: JOB_SEEKER
+2026-03-03 18:19:04 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: test@test.com
+2026-03-03 18:19:04 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: emp@test.com and role: EMPLOYER
+2026-03-03 18:19:04 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: emp@test.com with company: Tech Corp
+2026-03-03 18:28:27 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - Starting ApplicationNoteRepositoryTest using Java 17.0.18 on GeeshithaGaade with PID 9436 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:28:27 [main] DEBUG com.rev.app.repository.ApplicationNoteRepositoryTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:28:27 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - The following 1 profile is active: "test"
+2026-03-03 18:28:29 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - Started ApplicationNoteRepositoryTest in 2.873 seconds (JVM running for 4.326)
+2026-03-03 18:28:30 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Starting ApplicationRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 9436 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:28:30 [main] DEBUG com.rev.app.rest.ApplicationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:28:30 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:28:31 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Started ApplicationRestControllerTest in 1.258 seconds (JVM running for 6.125)
+2026-03-03 18:28:31 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Starting DashboardRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 9436 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:28:31 [main] DEBUG com.rev.app.rest.DashboardRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:28:31 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:28:32 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Started DashboardRestControllerTest in 0.534 seconds (JVM running for 6.9)
+2026-03-03 18:28:32 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Starting EmployerRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 9436 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:28:32 [main] DEBUG com.rev.app.rest.EmployerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:28:32 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:28:32 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Started EmployerRestControllerTest in 0.565 seconds (JVM running for 7.483)
+2026-03-03 18:28:32 [main] INFO  com.rev.app.rest.JobRestControllerTest - Starting JobRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 9436 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:28:32 [main] DEBUG com.rev.app.rest.JobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:28:32 [main] INFO  com.rev.app.rest.JobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:28:33 [main] INFO  com.rev.app.rest.JobRestControllerTest - Started JobRestControllerTest in 0.449 seconds (JVM running for 7.964)
+2026-03-03 18:28:33 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Starting JobSeekerRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 9436 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:28:33 [main] DEBUG com.rev.app.rest.JobSeekerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:28:33 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:28:33 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Started JobSeekerRestControllerTest in 0.469 seconds (JVM running for 8.491)
+2026-03-03 18:28:33 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Starting NotificationRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 9436 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:28:33 [main] DEBUG com.rev.app.rest.NotificationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:28:33 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:28:34 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Started NotificationRestControllerTest in 0.405 seconds (JVM running for 8.918)
+2026-03-03 18:28:34 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Starting ResumeRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 9436 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:28:34 [main] DEBUG com.rev.app.rest.ResumeRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:28:34 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:28:34 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Started ResumeRestControllerTest in 0.405 seconds (JVM running for 9.348)
+2026-03-03 18:28:34 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Starting SavedJobRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 9436 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:28:34 [main] DEBUG com.rev.app.rest.SavedJobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:28:34 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:28:35 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Started SavedJobRestControllerTest in 0.471 seconds (JVM running for 9.853)
+2026-03-03 18:28:35 [main] INFO  com.rev.app.rest.UserRestControllerTest - Starting UserRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 9436 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:28:35 [main] DEBUG com.rev.app.rest.UserRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:28:35 [main] INFO  com.rev.app.rest.UserRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:28:35 [main] INFO  com.rev.app.rest.UserRestControllerTest - Started UserRestControllerTest in 0.447 seconds (JVM running for 10.325)
+2026-03-03 18:28:35 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=1 job=1 status=APPLIED
+2026-03-03 18:28:35 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker null attempted duplicate application for job null
+2026-03-03 18:28:35 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: test@test.com
+2026-03-03 18:28:35 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: test@test.com (role: JOB_SEEKER)
+2026-03-03 18:28:35 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: non@test.com
+2026-03-03 18:28:35 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed — no account found for email: non@test.com
+2026-03-03 18:28:35 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: test@test.com and role: JOB_SEEKER
+2026-03-03 18:28:35 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: test@test.com
+2026-03-03 18:28:35 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: emp@test.com and role: EMPLOYER
+2026-03-03 18:28:35 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: emp@test.com with company: Tech Corp
+2026-03-03 18:36:33 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - Starting ApplicationNoteRepositoryTest using Java 17.0.18 on GeeshithaGaade with PID 18944 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:36:33 [main] DEBUG com.rev.app.repository.ApplicationNoteRepositoryTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:36:33 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - The following 1 profile is active: "test"
+2026-03-03 18:36:36 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - Started ApplicationNoteRepositoryTest in 3.688 seconds (JVM running for 5.391)
+2026-03-03 18:36:37 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Starting ApplicationRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 18944 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:36:37 [main] DEBUG com.rev.app.rest.ApplicationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:36:37 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:36:39 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Started ApplicationRestControllerTest in 1.51 seconds (JVM running for 7.583)
+2026-03-03 18:36:39 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Starting DashboardRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 18944 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:36:39 [main] DEBUG com.rev.app.rest.DashboardRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:36:39 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:36:40 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Started DashboardRestControllerTest in 0.791 seconds (JVM running for 8.698)
+2026-03-03 18:36:40 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Starting EmployerRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 18944 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:36:40 [main] DEBUG com.rev.app.rest.EmployerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:36:40 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:36:40 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Started EmployerRestControllerTest in 0.656 seconds (JVM running for 9.375)
+2026-03-03 18:36:40 [main] INFO  com.rev.app.rest.JobRestControllerTest - Starting JobRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 18944 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:36:40 [main] DEBUG com.rev.app.rest.JobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:36:40 [main] INFO  com.rev.app.rest.JobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:36:41 [main] INFO  com.rev.app.rest.JobRestControllerTest - Started JobRestControllerTest in 0.624 seconds (JVM running for 10.033)
+2026-03-03 18:36:41 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Starting JobSeekerRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 18944 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:36:41 [main] DEBUG com.rev.app.rest.JobSeekerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:36:41 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:36:42 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Started JobSeekerRestControllerTest in 0.673 seconds (JVM running for 10.764)
+2026-03-03 18:36:42 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Starting NotificationRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 18944 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:36:42 [main] DEBUG com.rev.app.rest.NotificationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:36:42 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:36:43 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Started NotificationRestControllerTest in 1.006 seconds (JVM running for 11.802)
+2026-03-03 18:36:43 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Starting ResumeRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 18944 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:36:43 [main] DEBUG com.rev.app.rest.ResumeRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:36:43 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:36:43 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Started ResumeRestControllerTest in 0.673 seconds (JVM running for 12.505)
+2026-03-03 18:36:44 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Starting SavedJobRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 18944 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:36:44 [main] DEBUG com.rev.app.rest.SavedJobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:36:44 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:36:44 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Started SavedJobRestControllerTest in 0.495 seconds (JVM running for 13.048)
+2026-03-03 18:36:44 [main] INFO  com.rev.app.rest.UserRestControllerTest - Starting UserRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 18944 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:36:44 [main] DEBUG com.rev.app.rest.UserRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:36:44 [main] INFO  com.rev.app.rest.UserRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:36:45 [main] INFO  com.rev.app.rest.UserRestControllerTest - Started UserRestControllerTest in 0.518 seconds (JVM running for 13.591)
+2026-03-03 18:36:45 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=1 job=1 status=APPLIED
+2026-03-03 18:36:45 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 1 status updated to SHORTLISTED
+2026-03-03 18:36:45 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker null attempted duplicate application for job null
+2026-03-03 18:36:45 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 1 withdrawn. Reason: Found another job
+2026-03-03 18:36:45 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: test@test.com
+2026-03-03 18:36:45 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: test@test.com (role: JOB_SEEKER)
+2026-03-03 18:36:45 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: non@test.com
+2026-03-03 18:36:45 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed — no account found for email: non@test.com
+2026-03-03 18:36:45 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: test@test.com and role: JOB_SEEKER
+2026-03-03 18:36:45 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: test@test.com
+2026-03-03 18:36:45 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: emp@test.com and role: EMPLOYER
+2026-03-03 18:36:45 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: emp@test.com with company: Tech Corp
+2026-03-03 18:37:37 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - Starting ApplicationNoteRepositoryTest using Java 17.0.18 on GeeshithaGaade with PID 5528 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:37:37 [main] DEBUG com.rev.app.repository.ApplicationNoteRepositoryTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:37:37 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - The following 1 profile is active: "test"
+2026-03-03 18:37:40 [main] INFO  com.rev.app.repository.ApplicationNoteRepositoryTest - Started ApplicationNoteRepositoryTest in 3.106 seconds (JVM running for 4.503)
+2026-03-03 18:37:40 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Starting ApplicationRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 5528 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:37:40 [main] DEBUG com.rev.app.rest.ApplicationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:37:40 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:37:42 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Started ApplicationRestControllerTest in 1.387 seconds (JVM running for 6.489)
+2026-03-03 18:37:42 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Starting DashboardRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 5528 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:37:42 [main] DEBUG com.rev.app.rest.DashboardRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:37:42 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:37:43 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Started DashboardRestControllerTest in 1.085 seconds (JVM running for 7.884)
+2026-03-03 18:37:43 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Starting EmployerRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 5528 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:37:43 [main] DEBUG com.rev.app.rest.EmployerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:37:43 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:37:44 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Started EmployerRestControllerTest in 0.714 seconds (JVM running for 8.623)
+2026-03-03 18:37:44 [main] INFO  com.rev.app.rest.JobRestControllerTest - Starting JobRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 5528 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:37:44 [main] DEBUG com.rev.app.rest.JobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:37:44 [main] INFO  com.rev.app.rest.JobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:37:44 [main] INFO  com.rev.app.rest.JobRestControllerTest - Started JobRestControllerTest in 0.591 seconds (JVM running for 9.254)
+2026-03-03 18:37:44 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Starting JobSeekerRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 5528 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:37:44 [main] DEBUG com.rev.app.rest.JobSeekerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:37:44 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:37:45 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Started JobSeekerRestControllerTest in 0.581 seconds (JVM running for 9.905)
+2026-03-03 18:37:45 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Starting NotificationRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 5528 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:37:45 [main] DEBUG com.rev.app.rest.NotificationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:37:45 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:37:45 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Started NotificationRestControllerTest in 0.412 seconds (JVM running for 10.342)
+2026-03-03 18:37:45 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Starting ResumeRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 5528 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:37:45 [main] DEBUG com.rev.app.rest.ResumeRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:37:45 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:37:46 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Started ResumeRestControllerTest in 0.408 seconds (JVM running for 10.773)
+2026-03-03 18:37:46 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Starting SavedJobRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 5528 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:37:46 [main] DEBUG com.rev.app.rest.SavedJobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:37:46 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:37:46 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Started SavedJobRestControllerTest in 0.521 seconds (JVM running for 11.33)
+2026-03-03 18:37:46 [main] INFO  com.rev.app.rest.UserRestControllerTest - Starting UserRestControllerTest using Java 17.0.18 on GeeshithaGaade with PID 5528 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:37:46 [main] DEBUG com.rev.app.rest.UserRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:37:46 [main] INFO  com.rev.app.rest.UserRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:37:47 [main] INFO  com.rev.app.rest.UserRestControllerTest - Started UserRestControllerTest in 0.351 seconds (JVM running for 11.702)
+2026-03-03 18:37:47 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=1 job=1 status=APPLIED
+2026-03-03 18:37:47 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 1 status updated to SHORTLISTED
+2026-03-03 18:37:47 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker null attempted duplicate application for job null
+2026-03-03 18:37:47 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 1 withdrawn. Reason: Found another job
+2026-03-03 18:37:47 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: test@test.com
+2026-03-03 18:37:47 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: test@test.com (role: JOB_SEEKER)
+2026-03-03 18:37:47 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: non@test.com
+2026-03-03 18:37:47 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed — no account found for email: non@test.com
+2026-03-03 18:37:47 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: test@test.com and role: JOB_SEEKER
+2026-03-03 18:37:47 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: test@test.com
+2026-03-03 18:37:47 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: emp@test.com and role: EMPLOYER
+2026-03-03 18:37:47 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: emp@test.com with company: Tech Corp
+2026-03-03 18:45:08 [main] INFO  com.rev.app.rest.JobRestControllerTest - Starting JobRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 7256 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:08 [main] DEBUG com.rev.app.rest.JobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:08 [main] INFO  com.rev.app.rest.JobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:10 [main] INFO  com.rev.app.rest.JobRestControllerTest - Started JobRestControllerTest in 2.379 seconds (JVM running for 4.829)
+2026-03-03 18:45:10 [main] INFO  com.rev.app.rest.UserRestControllerTest - Starting UserRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 7256 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:10 [main] DEBUG com.rev.app.rest.UserRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:10 [main] INFO  com.rev.app.rest.UserRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:11 [main] INFO  com.rev.app.rest.UserRestControllerTest - Started UserRestControllerTest in 0.563 seconds (JVM running for 5.651)
+2026-03-03 18:45:11 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Starting ResumeRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 7256 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:11 [main] DEBUG com.rev.app.rest.ResumeRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:11 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:11 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Started ResumeRestControllerTest in 0.493 seconds (JVM running for 6.305)
+2026-03-03 18:45:12 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Starting EmployerRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 7256 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:12 [main] DEBUG com.rev.app.rest.EmployerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:12 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:12 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Started EmployerRestControllerTest in 0.464 seconds (JVM running for 6.818)
+2026-03-03 18:45:12 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Starting SavedJobRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 7256 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:12 [main] DEBUG com.rev.app.rest.SavedJobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:12 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:12 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Started SavedJobRestControllerTest in 0.461 seconds (JVM running for 7.314)
+2026-03-03 18:45:12 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Starting DashboardRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 7256 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:12 [main] DEBUG com.rev.app.rest.DashboardRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:12 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:13 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Started DashboardRestControllerTest in 0.428 seconds (JVM running for 7.776)
+2026-03-03 18:45:13 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Starting JobSeekerRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 7256 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:13 [main] DEBUG com.rev.app.rest.JobSeekerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:13 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:13 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Started JobSeekerRestControllerTest in 0.383 seconds (JVM running for 8.175)
+2026-03-03 18:45:13 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Starting ApplicationRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 7256 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:13 [main] DEBUG com.rev.app.rest.ApplicationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:13 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:14 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Started ApplicationRestControllerTest in 0.337 seconds (JVM running for 8.54)
+2026-03-03 18:45:14 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Starting NotificationRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 7256 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:14 [main] DEBUG com.rev.app.rest.NotificationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:14 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:14 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Started NotificationRestControllerTest in 0.293 seconds (JVM running for 8.869)
+2026-03-03 18:45:14 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: test@test.com and role: JOB_SEEKER
+2026-03-03 18:45:14 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: test@test.com
+2026-03-03 18:45:14 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: emp@test.com and role: EMPLOYER
+2026-03-03 18:45:14 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: emp@test.com with company: Tech Corp
+2026-03-03 18:45:14 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=1 job=1 status=APPLIED
+2026-03-03 18:45:14 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 1 status updated to SHORTLISTED
+2026-03-03 18:45:14 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker null attempted duplicate application for job null
+2026-03-03 18:45:14 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 1 withdrawn. Reason: Found another job
+2026-03-03 18:45:14 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: test@test.com
+2026-03-03 18:45:14 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: test@test.com (role: JOB_SEEKER)
+2026-03-03 18:45:14 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: non@test.com
+2026-03-03 18:45:14 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed â€” no account found for email: non@test.com
+2026-03-03 18:45:14 [main] INFO  com.rev.app.repository.JobRepositoryTest - Starting JobRepositoryTest using Java 25.0.2 on GeeshithaGaade with PID 7256 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:14 [main] DEBUG com.rev.app.repository.JobRepositoryTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:14 [main] INFO  com.rev.app.repository.JobRepositoryTest - The following 1 profile is active: "test"
+2026-03-03 18:45:16 [main] INFO  com.rev.app.repository.JobRepositoryTest - Started JobRepositoryTest in 1.745 seconds (JVM running for 11.06)
+2026-03-03 18:45:47 [main] INFO  com.rev.app.rest.JobRestControllerTest - Starting JobRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 340 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:47 [main] DEBUG com.rev.app.rest.JobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:47 [main] INFO  com.rev.app.rest.JobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:49 [main] INFO  com.rev.app.rest.JobRestControllerTest - Started JobRestControllerTest in 2.188 seconds (JVM running for 3.691)
+2026-03-03 18:45:49 [main] INFO  com.rev.app.rest.UserRestControllerTest - Starting UserRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 340 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:49 [main] DEBUG com.rev.app.rest.UserRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:49 [main] INFO  com.rev.app.rest.UserRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:50 [main] INFO  com.rev.app.rest.UserRestControllerTest - Started UserRestControllerTest in 0.543 seconds (JVM running for 4.478)
+2026-03-03 18:45:50 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Starting ResumeRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 340 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:50 [main] DEBUG com.rev.app.rest.ResumeRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:50 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:50 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Started ResumeRestControllerTest in 0.495 seconds (JVM running for 5.13)
+2026-03-03 18:45:50 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Starting EmployerRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 340 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:50 [main] DEBUG com.rev.app.rest.EmployerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:50 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:51 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Started EmployerRestControllerTest in 0.406 seconds (JVM running for 5.581)
+2026-03-03 18:45:51 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Starting SavedJobRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 340 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:51 [main] DEBUG com.rev.app.rest.SavedJobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:51 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:51 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Started SavedJobRestControllerTest in 0.409 seconds (JVM running for 6.024)
+2026-03-03 18:45:51 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Starting DashboardRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 340 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:51 [main] DEBUG com.rev.app.rest.DashboardRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:51 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:52 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Started DashboardRestControllerTest in 0.358 seconds (JVM running for 6.412)
+2026-03-03 18:45:52 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Starting JobSeekerRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 340 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:52 [main] DEBUG com.rev.app.rest.JobSeekerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:52 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:52 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Started JobSeekerRestControllerTest in 0.345 seconds (JVM running for 6.769)
+2026-03-03 18:45:52 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Starting ApplicationRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 340 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:52 [main] DEBUG com.rev.app.rest.ApplicationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:52 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:52 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Started ApplicationRestControllerTest in 0.34 seconds (JVM running for 7.134)
+2026-03-03 18:45:52 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Starting NotificationRestControllerTest using Java 25.0.2 on GeeshithaGaade with PID 340 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:52 [main] DEBUG com.rev.app.rest.NotificationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:52 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 18:45:53 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Started NotificationRestControllerTest in 0.312 seconds (JVM running for 7.477)
+2026-03-03 18:45:53 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: test@test.com and role: JOB_SEEKER
+2026-03-03 18:45:53 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: test@test.com
+2026-03-03 18:45:53 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: emp@test.com and role: EMPLOYER
+2026-03-03 18:45:53 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: emp@test.com with company: Tech Corp
+2026-03-03 18:45:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=1 job=1 status=APPLIED
+2026-03-03 18:45:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 1 status updated to SHORTLISTED
+2026-03-03 18:45:53 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker null attempted duplicate application for job null
+2026-03-03 18:45:53 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 1 withdrawn. Reason: Found another job
+2026-03-03 18:45:53 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: test@test.com
+2026-03-03 18:45:53 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: test@test.com (role: JOB_SEEKER)
+2026-03-03 18:45:53 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: non@test.com
+2026-03-03 18:45:53 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed â€” no account found for email: non@test.com
+2026-03-03 18:45:53 [main] INFO  com.rev.app.repository.JobRepositoryTest - Starting JobRepositoryTest using Java 25.0.2 on GeeshithaGaade with PID 340 (started by Geesh in C:\Users\Geesh\Downloads\PROJECT2 (3)\PROJECT2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 18:45:53 [main] DEBUG com.rev.app.repository.JobRepositoryTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 18:45:53 [main] INFO  com.rev.app.repository.JobRepositoryTest - The following 1 profile is active: "test"
+2026-03-03 18:45:55 [main] INFO  com.rev.app.repository.JobRepositoryTest - Started JobRepositoryTest in 1.726 seconds (JVM running for 9.704)
+2026-03-03 19:11:00 [main] INFO  com.rev.app.rest.JobRestControllerTest - Starting JobRestControllerTest using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2340 (started by Dell in C:\Users\Dell\Downloads\REVHIRE_PROJECT_2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 19:11:00 [main] DEBUG com.rev.app.rest.JobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 19:11:00 [main] INFO  com.rev.app.rest.JobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 19:11:06 [main] INFO  com.rev.app.rest.JobRestControllerTest - Started JobRestControllerTest in 7.226 seconds (JVM running for 14.242)
+2026-03-03 19:11:07 [main] INFO  com.rev.app.rest.UserRestControllerTest - Starting UserRestControllerTest using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2340 (started by Dell in C:\Users\Dell\Downloads\REVHIRE_PROJECT_2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 19:11:07 [main] DEBUG com.rev.app.rest.UserRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 19:11:07 [main] INFO  com.rev.app.rest.UserRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 19:11:09 [main] INFO  com.rev.app.rest.UserRestControllerTest - Started UserRestControllerTest in 1.704 seconds (JVM running for 16.877)
+2026-03-03 19:11:09 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Starting ResumeRestControllerTest using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2340 (started by Dell in C:\Users\Dell\Downloads\REVHIRE_PROJECT_2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 19:11:09 [main] DEBUG com.rev.app.rest.ResumeRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 19:11:09 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 19:11:11 [main] INFO  com.rev.app.rest.ResumeRestControllerTest - Started ResumeRestControllerTest in 1.526 seconds (JVM running for 18.804)
+2026-03-03 19:11:11 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Starting EmployerRestControllerTest using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2340 (started by Dell in C:\Users\Dell\Downloads\REVHIRE_PROJECT_2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 19:11:11 [main] DEBUG com.rev.app.rest.EmployerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 19:11:11 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 19:11:12 [main] INFO  com.rev.app.rest.EmployerRestControllerTest - Started EmployerRestControllerTest in 1.18 seconds (JVM running for 20.1)
+2026-03-03 19:11:12 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Starting SavedJobRestControllerTest using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2340 (started by Dell in C:\Users\Dell\Downloads\REVHIRE_PROJECT_2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 19:11:12 [main] DEBUG com.rev.app.rest.SavedJobRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 19:11:12 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 19:11:13 [main] INFO  com.rev.app.rest.SavedJobRestControllerTest - Started SavedJobRestControllerTest in 1.182 seconds (JVM running for 21.371)
+2026-03-03 19:11:14 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Starting DashboardRestControllerTest using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2340 (started by Dell in C:\Users\Dell\Downloads\REVHIRE_PROJECT_2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 19:11:14 [main] DEBUG com.rev.app.rest.DashboardRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 19:11:14 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 19:11:15 [main] INFO  com.rev.app.rest.DashboardRestControllerTest - Started DashboardRestControllerTest in 1.161 seconds (JVM running for 22.625)
+2026-03-03 19:11:15 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Starting JobSeekerRestControllerTest using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2340 (started by Dell in C:\Users\Dell\Downloads\REVHIRE_PROJECT_2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 19:11:15 [main] DEBUG com.rev.app.rest.JobSeekerRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 19:11:15 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 19:11:16 [main] INFO  com.rev.app.rest.JobSeekerRestControllerTest - Started JobSeekerRestControllerTest in 1.038 seconds (JVM running for 23.699)
+2026-03-03 19:11:16 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Starting ApplicationRestControllerTest using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2340 (started by Dell in C:\Users\Dell\Downloads\REVHIRE_PROJECT_2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 19:11:16 [main] DEBUG com.rev.app.rest.ApplicationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 19:11:16 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 19:11:17 [main] INFO  com.rev.app.rest.ApplicationRestControllerTest - Started ApplicationRestControllerTest in 1.209 seconds (JVM running for 24.989)
+2026-03-03 19:11:17 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Starting NotificationRestControllerTest using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2340 (started by Dell in C:\Users\Dell\Downloads\REVHIRE_PROJECT_2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 19:11:17 [main] DEBUG com.rev.app.rest.NotificationRestControllerTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 19:11:17 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - No active profile set, falling back to 1 default profile: "default"
+2026-03-03 19:11:18 [main] INFO  com.rev.app.rest.NotificationRestControllerTest - Started NotificationRestControllerTest in 0.96 seconds (JVM running for 26.065)
+2026-03-03 19:11:19 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: test@test.com and role: JOB_SEEKER
+2026-03-03 19:11:19 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: test@test.com
+2026-03-03 19:11:19 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: emp@test.com and role: EMPLOYER
+2026-03-03 19:11:19 [main] INFO  com.rev.app.service.UserServiceImpl - Employer profile created for user: emp@test.com with company: Tech Corp
+2026-03-03 19:11:19 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=1 job=1 status=APPLIED
+2026-03-03 19:11:19 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 1 status updated to SHORTLISTED
+2026-03-03 19:11:19 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker null attempted duplicate application for job null
+2026-03-03 19:11:19 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 1 withdrawn. Reason: Found another job
+2026-03-03 19:11:19 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: test@test.com
+2026-03-03 19:11:19 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: test@test.com (role: JOB_SEEKER)
+2026-03-03 19:11:19 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: non@test.com
+2026-03-03 19:11:19 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed â€” no account found for email: non@test.com
+2026-03-03 19:11:20 [main] INFO  com.rev.app.repository.JobRepositoryTest - Starting JobRepositoryTest using Java 25.0.2 on DESKTOP-M0EO5OJ with PID 2340 (started by Dell in C:\Users\Dell\Downloads\REVHIRE_PROJECT_2\REVHIRE_PROJECT_2\REVHIRE_P2)
+2026-03-03 19:11:20 [main] DEBUG com.rev.app.repository.JobRepositoryTest - Running with Spring Boot v2.7.18, Spring v5.3.31
+2026-03-03 19:11:20 [main] INFO  com.rev.app.repository.JobRepositoryTest - The following 1 profile is active: "test"
+2026-03-03 19:11:26 [main] INFO  com.rev.app.repository.JobRepositoryTest - Started JobRepositoryTest in 6.258 seconds (JVM running for 33.696)

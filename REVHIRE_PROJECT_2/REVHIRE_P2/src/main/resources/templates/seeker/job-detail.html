@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title th:text="${job.title + ' | RevHire'}">Job Details - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --p-accent: #2563eb;
+            --p-bg: #f8fafc;
+            --p-card: #ffffff;
+            --p-text: #0f172a;
+            --p-muted: #64748b;
+            --p-border: #e2e8f0;
+            --p-radius: 12px;
+            --p-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            background-color: var(--p-bg);
+            color: var(--p-text);
+        }
+
+        .premium-container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+
+        .job-main-header {
+            background: var(--p-card);
+            padding: 2.5rem;
+            border-radius: var(--p-radius);
+            box-shadow: var(--p-shadow);
+            border: 1px solid var(--p-border);
+            margin-bottom: 2rem;
+        }
+
+        .header-top-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .title-group h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin: 0 0 0.5rem 0;
+            color: var(--p-text);
+        }
+
+        .company-link {
+            font-size: 1.125rem;
+            color: var(--p-accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .action-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .badge-premium {
+            background: var(--primary-light);
+            color: var(--p-accent);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+
+        .job-meta-horizontal {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--p-border);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9375rem;
+            color: var(--p-muted);
+        }
+
+        .meta-item i {
+            color: var(--p-accent);
+            opacity: 0.8;
+        }
+
+        .meta-item strong {
+            color: var(--p-text);
+            margin-left: 0.25rem;
+        }
+
+
+        .details-grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .section-card {
+            background: var(--p-card);
+            padding: 2rem;
+            border-radius: var(--p-radius);
+            box-shadow: var(--p-shadow);
+            border: 1px solid var(--p-border);
+        }
+
+        .section-card h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-card h2::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--p-border);
+        }
+
+        .description-text {
+            line-height: 1.7;
+            color: var(--text-body);
+            white-space: pre-line;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-pill {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+
+        .company-info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .info-col h4 {
+            font-size: 0.8125rem;
+            color: var(--p-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-col p,
+        .info-col a {
+            font-weight: 600;
+            color: var(--p-text);
+            font-size: 1rem;
+        }
+
+
+        .apply-premium-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--p-radius);
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1);
+            border: 2px solid var(--primary-light);
+            margin-top: 1rem;
+        }
+
+        .apply-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .apply-header h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .resume-info-box {
+            background: var(--p-bg);
+            padding: 1.25rem;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px dashed var(--p-border);
+        }
+
+        .cover-letter-area {
+            width: 100%;
+            border: 1px solid var(--p-border);
+            border-radius: 10px;
+            padding: 1rem;
+            font-family: inherit;
+            resize: vertical;
+            margin-top: 0.5rem;
+            transition: border-color 0.2s;
+        }
+
+        .cover-letter-area:focus {
+            outline: none;
+            border-color: var(--p-accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .btn-apply-full {
+            display: block;
+            width: 100%;
+            background: var(--p-accent);
+            color: white;
+            padding: 1.25rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 2rem;
+        }
+
+        .btn-apply-full:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px -3px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-apply-full:disabled {
+            background: var(--secondary);
+            cursor: not-allowed;
+            transform: none;
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            .header-top-row {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .action-group {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .company-info-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .job-meta-horizontal {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/seeker/jobs}" class="nav-link">Browse Jobs</a>
+                <a th:href="@{/seeker/applications}" class="nav-link">Applications</a>
+                <a th:href="@{/seeker/saved-jobs}" class="nav-link">Saved Jobs</a>
+                <a th:href="@{/seeker/resume}" class="nav-link">Resume</a>
+                <a th:href="@{/seeker/notifications}" class="nav-link">Notifications</a>
+                <a th:href="@{/seeker/profile}" class="nav-link">Profile</a>
+                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="premium-container">
+
+        <div th:if="${param.saved}" class="alert alert-success" style="margin-bottom: 2rem; border-radius: 12px;">Job
+            saved successfully!</div>
+        <div th:if="${param.unsaved}" class="alert alert-success" style="margin-bottom: 2rem; border-radius: 12px;">Job
+            removed from saved list.</div>
+
+
+        <div class="job-main-header">
+            <div class="header-top-row">
+                <div class="title-group">
+                    <h1 th:text="${job.title}">Software Developer</h1>
+                    <a href="#" class="company-link" th:text="${job.companyName}">cognizant</a>
+                </div>
+                <div class="action-group">
+                    <form th:if="${!isSaved}" th:action="@{/seeker/jobs/{id}/save(id=${job.id})}" method="post">
+                        <button type="submit" class="btn btn-outline"
+                            style="border-radius: 10px; padding: 0.6rem 1.5rem;">Save Job</button>
+                    </form>
+                    <form th:if="${isSaved}" th:action="@{/seeker/jobs/{id}/unsave(id=${job.id})}" method="post">
+                        <button type="submit" class="btn btn-primary"
+                            style="border-radius: 10px; padding: 0.6rem 1.5rem;">Saved</button>
+                    </form>
+                    <span class="badge-premium" th:text="${job.jobType}">Full-time</span>
+                </div>
+            </div>
+
+            <div class="job-meta-horizontal">
+                <div class="meta-item"><i data-lucide="map-pin" size="18"></i> Location: <strong
+                        th:text="${job.location}">Chennai</strong></div>
+                <div class="meta-item"><i data-lucide="briefcase" size="18"></i> Experience: <strong
+                        th:text="${job.experienceRequired}">3+ years</strong></div>
+                <div class="meta-item"><i data-lucide="dollar-sign" size="18"></i> Salary: <strong
+                        th:text="${job.salaryRange != null ? job.salaryRange + ' LPA' : 'Not Disclosed'}">4.0
+                        LPA</strong></div>
+                <div class="meta-item"><i data-lucide="calendar" size="18"></i> Deadline: <strong
+                        th:text="${job.deadline}">2026-12-12</strong></div>
+                <div class="meta-item"><i data-lucide="user-check" size="18"></i> Openings: <strong
+                        th:text="${job.numberOfOpenings}">9</strong></div>
+            </div>
+        </div>
+
+        <div class="details-grid">
+
+            <section class="section-card">
+                <h2>Job Description</h2>
+                <div class="description-text" th:text="${job.description}">Detailed job description goes here...</div>
+            </section>
+
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <section class="section-card" th:if="${job.skillsRequired}">
+                    <h2>Skills Required</h2>
+                    <div class="skills-container">
+                        <span th:each="skill : ${#strings.listSplit(job.skillsRequired, ',')}" class="skill-pill"
+                            th:text="${skill.trim()}">Java</span>
+                    </div>
+                </section>
+
+                <section class="section-card" th:if="${job.educationRequired}">
+                    <h2>Education</h2>
+                    <p style="font-weight: 600; font-size: 1.125rem;" th:text="${job.educationRequired}">B.Tech</p>
+                </section>
+            </div>
+
+
+            <section class="section-card">
+                <h2 th:text="${'About ' + job.companyName}">About Company</h2>
+                <div class="company-info-grid">
+                    <div class="info-col">
+                        <h4>Industry</h4>
+                        <p th:text="${job.companyIndustry ?: 'Technology'}">Technology</p>
+                    </div>
+                    <div class="info-col">
+                        <h4>Size</h4>
+                        <p th:text="${job.companySize ?: '51-200'}">51-200</p>
+                    </div>
+                    <div class="info-col">
+                        <h4>Website</h4>
+                        <a th:href="${job.companyWebsite ?: 'https://revhire.com'}"
+                            th:text="${job.companyWebsite ?: 'https://revhire.com'}" target="_blank">Visit Site</a>
+                    </div>
+                </div>
+                <p th:if="${job.companyDescription}" th:text="${job.companyDescription}"
+                    style="margin-top: 2rem; font-size: 0.9375rem; color: var(--p-muted); line-height: 1.6; border-left: 3px solid var(--primary-light); padding-left: 1.5rem;">
+                    Company description...
+                </p>
+            </section>
+
+
+            <section class="apply-premium-card">
+                <div th:if="${isApplied}" style="text-align: center; padding: 1rem;">
+                    <div
+                        style="color: var(--success); display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 800; font-size: 1.25rem;">
+                        <i data-lucide="check-circle"></i> Already Applied
+                    </div>
+                    <p style="color: var(--p-muted); margin-top: 1rem;">You've already submitted your interest for this
+                        role. Good luck!</p>
+                    <a th:href="@{/seeker/applications}" class="btn btn-outline"
+                        style="margin-top: 1.5rem; border-radius: 10px;">View My Applications</a>
+                </div>
+
+                <div th:unless="${isApplied}">
+                    <div class="apply-header">
+                        <h3>Ready to Apply?</h3>
+                        <p style="color: var(--p-muted); margin-bottom: 2rem;">Take the next step in your career and
+                            submit your application for this role.</p>
+
+                        <a th:href="@{/seeker/jobs/{id}/apply(id=${job.id})}" class="btn-apply-full"
+                            style="text-align: center; text-decoration: none;">
+                            Apply for Job Now
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

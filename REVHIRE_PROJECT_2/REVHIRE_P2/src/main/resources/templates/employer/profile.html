@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Company Profile - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/employer/jobs}" class="nav-link">My Jobs</a>
+                <a th:href="@{/employer/jobs/new}" class="nav-link">Post Job</a>
+                <a th:href="@{/employer/profile}" class="nav-link active">Profile</a>
+                <a th:href="@{/employer/notifications}" class="nav-link">Notifications</a>
+                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <div class="page-header-row" style="margin-bottom: 2rem;">
+            <h1 class="page-title">Company Profile</h1>
+            <p style="color: var(--text-muted);">Manage your public profile and company information</p>
+        </div>
+
+        <div th:if="${param.updated}" class="alert alert-success">Profile updated successfully!</div>
+
+        <form th:action="@{/employer/profile}" th:object="${company}" method="post">
+
+            <div class="card" style="margin-bottom: 2rem;">
+                <div style="border-bottom: 1px solid var(--border); margin-bottom: 1.5rem; padding-bottom: 0.5rem;">
+                    <h3 style="font-size: 1.125rem; color: var(--text-main);">Contact Representative</h3>
+
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" name="contactPerson" th:value="${employer.contactPerson}"
+                            class="form-control" placeholder="e.g. Priyanka Ambati" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Designation</label>
+                        <input type="text" name="designation" th:value="${employer.designation}" class="form-control"
+                            placeholder="e.g. HR Manager, Hiring Lead" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div style="border-bottom: 1px solid var(--border); margin-bottom: 1.5rem; padding-bottom: 0.5rem;">
+                    <h3 style="font-size: 1.125rem; color: var(--text-main);">Company Information</h3>
+                    <p style="font-size: 0.875rem; color: var(--text-muted);">General details about your organization
+                    </p>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" th:field="*{name}" class="form-control" placeholder="e.g. Revature"
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label>Industry</label>
+                        <input type="text" th:field="*{industry}" class="form-control"
+                            placeholder="e.g. Information Technology" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Company Size</label>
+                        <select th:field="*{size}" class="form-control">
+                            <option value="">Select size...</option>
+                            <option value="1-10">1-10 Employees</option>
+                            <option value="11-50">11-50 Employees</option>
+                            <option value="51-200">51-200 Employees</option>
+                            <option value="201-500">201-500 Employees</option>
+                            <option value="500+">500+ Employees</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" th:field="*{location}" class="form-control" placeholder="e.g. Reston, VA" />
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label>Website URL</label>
+                    <input type="url" th:field="*{website}" class="form-control"
+                        placeholder="https://www.company.com" />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <label>About the Company</label>
+                    <textarea th:field="*{description}" class="form-control" rows="6"
+                        placeholder="Describe your company culture, mission, and what you look for in candidates..."></textarea>
+                </div>
+
+                <div
+                    style="display: flex; gap: 1rem; border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 1rem;">
+                    <button type="submit" class="btn btn-primary" style="padding: 0.75rem 2.5rem;">Save Changes</button>
+                    <a th:href="@{/dashboard}" class="btn btn-outline" style="padding: 0.75rem 2.5rem;">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

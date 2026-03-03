@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Register - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <a th:href="@{/}" class="brand-link"> RevHire</a>
+                <h2>Create Account</h2>
+                <p>Join RevHire and start your journey</p>
+            </div>
+
+            <div th:if="${error}" class="alert alert-error" th:text="${error}"></div>
+
+            <form th:action="@{/register}" th:object="${userDTO}" method="post" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" th:field="*{email}" class="form-control"
+                        placeholder="you@example.com" required />
+                    <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="field-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" th:field="*{password}" class="form-control"
+                        placeholder="Min. 6 characters" required />
+                    <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="field-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" th:field="*{name}" class="form-control" placeholder="John Doe"
+                        required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" th:field="*{phone}" class="form-control" placeholder="+1..." />
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" th:field="*{location}" class="form-control"
+                        placeholder="City, Country" />
+                </div>
+
+                <div id="employer-fields" style="display: none;">
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" id="companyName" th:field="*{companyName}" class="form-control"
+                            placeholder="Revature LLC" />
+                    </div>
+                    <div class="form-group">
+                        <label for="industry">Industry</label>
+                        <input type="text" id="industry" th:field="*{industry}" class="form-control"
+                            placeholder="e.g. Technology, Finance" />
+                    </div>
+                    <div class="form-group">
+                        <label for="companySize">Company Size</label>
+                        <select id="companySize" th:field="*{companySize}" class="form-control">
+                            <option value="">Select size...</option>
+                            <option value="1-10">1-10</option>
+                            <option value="11-50">11-50</option>
+                            <option value="51-200">51-200</option>
+                            <option value="201-500">201-500</option>
+                            <option value="500+">500+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="website">Company Website</label>
+                        <input type="url" id="website" th:field="*{website}" class="form-control"
+                            placeholder="https://yourcompany.com" />
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Company Description</label>
+                        <textarea id="description" th:field="*{description}" class="form-control" rows="3"
+                            placeholder="Short brief about your company..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group" id="employment-field">
+                    <label for="employmentStatus">Employment Status</label>
+                    <select id="employmentStatus" th:field="*{employmentStatus}" class="form-control">
+                        <option value="">Select status...</option>
+                        <option value="Employed">Employed</option>
+                        <option value="Unemployed">Unemployed</option>
+                        <option value="Student">Student</option>
+                        <option value="Freelancer">Freelancer</option>
+                    </select>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label>I am a:</label>
+                    <div class="role-selector">
+                        <label class="role-card">
+                            <input type="radio" th:field="*{role}" value="JOB_SEEKER" onclick="toggleCompany(false)"
+                                required />
+                            <span class="role-label">Job Seeker</span>
+                        </label>
+                        <label class="role-card">
+                            <input type="radio" th:field="*{role}" value="EMPLOYER" onclick="toggleCompany(true)"
+                                required />
+                            <span class="role-label">Employer</span>
+                        </label>
+                    </div>
+                </div>
+
+                <script>
+                    function toggleCompany(show) {
+                        document.getElementById('employer-fields').style.display = show ? 'block' : 'none';
+                        document.getElementById('employment-field').style.display = show ? 'none' : 'block';
+                    }
+                </script>
+
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+            </form>
+
+            <p class="auth-footer">Already have an account? <a th:href="@{/login}">Log In</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

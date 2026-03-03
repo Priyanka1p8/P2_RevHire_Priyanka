@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Notifications - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/seeker/jobs}" class="nav-link">Browse Jobs</a>
+                <a th:href="@{/seeker/applications}" class="nav-link">Applications</a>
+                <a th:href="@{/seeker/saved-jobs}" class="nav-link">Saved Jobs</a>
+                <a th:href="@{/seeker/resume}" class="nav-link">Resume</a>
+                <a th:href="@{/seeker/notifications}" class="nav-link active">Notifications</a>
+                <a th:href="@{/seeker/profile}" class="nav-link">Profile</a>
+                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <h1 class="page-title">Notifications</h1>
+        <div th:if="${notifications.isEmpty()}" class="empty-state">
+            <p>No notifications yet.</p>
+        </div>
+        <div class="notification-list">
+            <div th:each="n : ${notifications}" class="notification-item" th:classappend="${!n.isRead ? 'unread' : ''}">
+                <p class="notification-message" th:text="${n.message}">Message</p>
+                <span class="notification-time"
+                    th:text="${#temporals.format(n.createdAt, 'dd MMM yyyy HH:mm')}">Time</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

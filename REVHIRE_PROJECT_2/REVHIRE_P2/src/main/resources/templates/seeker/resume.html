@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Management - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <style>
+        .resume-actions {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .resume-card {
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .resume-section-title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .resume-section-desc {
+            color: var(--text-muted);
+            font-size: 0.9375rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .form-section-label {
+            display: block;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .resume-actions {
+                flex-direction: column;
+            }
+
+            .resume-actions .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="nav-brand">
+                <a th:href="@{/}" style="color: var(--primary); font-weight: 800; font-size: 1.5rem;">RevHire</a>
+            </div>
+
+            <div class="nav-links" style="display: flex; gap: 2rem;">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/seeker/jobs}" class="nav-link">Browse Jobs</a>
+                <a th:href="@{/seeker/applications}" class="nav-link">Applications</a>
+                <a th:href="@{/seeker/saved-jobs}" class="nav-link">Saved Jobs</a>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 1.5rem;">
+                <a th:href="@{/seeker/notifications}" class="nav-link"
+                    style="color: var(--text-main); font-weight: 600;">
+                    Notifications (<span
+                        th:text="${unreadNotificationCount != null ? unreadNotificationCount : '0'}">0</span>)
+                </a>
+
+                <div class="user-dropdown">
+                    <div class="user-name-wrapper">
+                        <span th:text="${seeker != null ? seeker.name : 'Job Seeker'}">User Name</span>
+                        <small style="font-size: 0.6rem; vertical-align: middle; margin-left: 2px;">▼</small>
+                    </div>
+                    <div class="dropdown-content">
+                        <a th:href="@{/seeker/profile}">My Profile</a>
+                        <a th:href="@{/logout}">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-container" style="max-width: 900px;">
+        <h1 class="welcome-banner" style="font-size: 2.25rem; font-weight: 800; margin-bottom: 2rem;">Resume Management
+        </h1>
+
+
+        <div th:if="${param.saved}" class="alert alert-success">Resume saved successfully!</div>
+        <div th:if="${param.uploaded}" class="alert alert-success">File uploaded successfully!</div>
+        <div th:if="${uploadError}" class="alert alert-error" th:text="${uploadError}"></div>
+        <div th:if="${error}" class="alert alert-error" th:text="${error}"></div>
+
+
+        <div class="card resume-card">
+            <h2 class="resume-section-title">Build Your Resume</h2>
+            <p class="resume-section-desc">Create your professional resume using structured sections below.</p>
+
+            <form th:action="@{/seeker/resume}" th:object="${resume}" method="POST">
+
+                <input type="hidden" th:field="*{id}" />
+                <input type="hidden" name="jobSeekerId" th:value="${seekerId}" />
+
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+
+                    <div class="form-group">
+                        <label class="form-section-label">Objective</label>
+                        <textarea th:field="*{objective}" class="form-control" rows="4"
+                            placeholder="Write a professional summary..."></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="form-section-label">Education</label>
+                        <textarea th:field="*{education}" class="form-control" rows="4"
+                            placeholder="Degree, Institution, Dates..."></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="form-section-label">Work Experience</label>
+                        <textarea th:field="*{experience}" class="form-control" rows="6"
+                            placeholder="Job Title, Company, Responsibilities..."></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="form-section-label">Skills</label>
+                        <textarea th:field="*{skills}" class="form-control" rows="3"
+                            placeholder="Technical and soft skills..."></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="form-section-label">Projects</label>
+                        <textarea th:field="*{projects}" class="form-control" rows="4"
+                            placeholder="Project name and description..."></textarea>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class="form-section-label">Certifications</label>
+                        <textarea th:field="*{certifications}" class="form-control" rows="3"
+                            placeholder="Certification title, issuing organization..."></textarea>
+                    </div>
+                </div>
+
+
+                <div class="resume-actions">
+                    <button type="submit" class="btn btn-primary" style="padding-left: 3rem; padding-right: 3rem;">Save
+                        Resume</button>
+                    <a th:if="${resume != null and resume.id != null}" th:href="@{/seeker/resume/view}"
+                        class="btn btn-outline" style="font-weight: 600;">
+                        View Resume Preview
+                    </a>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="card resume-card">
+            <h2 class="resume-section-title">Upload Resume</h2>
+            <p class="resume-section-desc">Upload your formatted resume (PDF or DOCX, maximum 2MB).</p>
+
+            <div th:if="${resume != null and resume.fileName != null}"
+                style="margin-bottom: 2rem; padding: 1rem; background: var(--bg); border-radius: var(--radius); display: flex; justify-content: space-between; align-items: center;">
+                <div style="font-size: 0.875rem;">
+                    <span style="color: var(--text-muted); margin-right: 0.5rem;">Current file:</span>
+                    <strong th:text="${resume.fileName}" style="color: var(--primary);">resume.pdf</strong>
+                </div>
+                <form th:action="@{/seeker/resume/delete}" method="POST" onsubmit="return confirm('Delete this file?')">
+                    <button type="submit" class="btn btn-danger btn-sm"
+                        style="background: none; border: none; color: var(--danger); text-decoration: underline; padding: 0;">Delete
+                        File</button>
+                </form>
+            </div>
+
+            <form th:action="@{/seeker/resume/upload}" method="POST" enctype="multipart/form-data">
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <label class="form-section-label">Resume File</label>
+                    <input type="file" name="file" accept=".pdf,.docx" class="form-control" style="padding: 0.5rem;"
+                        required />
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <span
+                        th:text="${resume != null and resume.fileName != null ? 'Upload New File' : 'Upload Resume'}">Upload
+                        Resume</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <footer class="footer" style="margin-top: 5rem;">
+        <div class="container">
+            <p>&copy; 2026 RevHire. No icons, just excellence.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

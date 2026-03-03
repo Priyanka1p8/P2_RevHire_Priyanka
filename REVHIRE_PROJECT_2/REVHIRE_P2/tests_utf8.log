@@ -1,0 +1,105 @@
+﻿[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.rev.app:REVHIRE_P2 >-----------------------
+[INFO] Building REVHIRE_P2 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.20.0-GA during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- resources:3.2.0:resources (default-resources) @ REVHIRE_P2 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 21 resources
+[INFO] 
+[INFO] --- compiler:3.10.1:compile (default-compile) @ REVHIRE_P2 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.2.0:testResources (default-testResources) @ REVHIRE_P2 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory E:\p2222222222\REVHIRE_P2\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.10.1:testCompile (default-testCompile) @ REVHIRE_P2 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ REVHIRE_P2 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.rev.app.RevhireP2ApplicationTests
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.489 s - in com.rev.app.RevhireP2ApplicationTests
+[INFO] Running com.rev.app.service.ApplicationServiceImplTest
+18:31:57.135 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: null
+18:31:57.184 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+18:31:57.199 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+18:31:57.201 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to REJECTED
+18:31:57.203 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to REJECTED
+18:31:57.231 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Found another opportunity
+18:31:57.240 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 withdrawn. Reason: Got a better offer
+18:31:57.251 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+18:31:57.272 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to REJECTED
+18:31:57.281 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+18:31:57.290 [main] WARN  com.rev.app.service.ApplicationServiceImpl - Seeker 2 attempted duplicate application for job 1
+18:31:57.311 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application submitted: seeker=2 job=1 status=APPLIED
+18:31:57.322 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 100 status updated to SHORTLISTED
+18:31:57.324 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Application 101 status updated to SHORTLISTED
+18:31:57.325 [main] INFO  com.rev.app.service.ApplicationServiceImpl - Bulk status update: 2 applications set to SHORTLISTED
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.62 s - in com.rev.app.service.ApplicationServiceImplTest
+[INFO] Running com.rev.app.service.CustomUserDetailsServiceTest
+18:31:57.450 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: employer@revhire.com
+18:31:57.452 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: employer@revhire.com (role: EMPLOYER)
+18:31:57.477 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: unknown@revhire.com
+18:31:57.478 [main] WARN  com.rev.app.service.CustomUserDetailsService - Login failed ù no account found for email: unknown@revhire.com
+18:31:57.482 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: seeker@revhire.com
+18:31:57.484 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: seeker@revhire.com (role: JOB_SEEKER)
+18:31:57.488 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login attempt for email: seeker@revhire.com
+18:31:57.489 [main] INFO  com.rev.app.service.CustomUserDetailsService - Login successful for user: seeker@revhire.com (role: JOB_SEEKER)
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.143 s - in com.rev.app.service.CustomUserDetailsServiceTest
+[INFO] Running com.rev.app.service.JobServiceImplTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.256 s - in com.rev.app.service.JobServiceImplTest
+[INFO] Running com.rev.app.service.NotificationServiceImplTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 s - in com.rev.app.service.NotificationServiceImplTest
+[INFO] Running com.rev.app.service.ResumeServiceImplTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s - in com.rev.app.service.ResumeServiceImplTest
+[INFO] Running com.rev.app.service.SavedJobServiceImplTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 s - in com.rev.app.service.SavedJobServiceImplTest
+[INFO] Running com.rev.app.service.UserServiceImplTest
+18:31:58.115 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+18:31:58.117 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+18:31:58.124 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+18:31:58.127 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+18:31:58.133 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: employer@revhire.com and role: EMPLOYER
+18:31:58.163 [main] INFO  com.rev.app.service.UserServiceImpl - Registering new user with email: seeker@revhire.com and role: JOB_SEEKER
+18:31:58.165 [main] INFO  com.rev.app.service.UserServiceImpl - JobSeeker profile created for user: seeker@revhire.com
+[ERROR] Tests run: 8, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.088 s <<< FAILURE! - in com.rev.app.service.UserServiceImplTest
+[ERROR] testRegisterUser_EmployerRole_SavedCorrectly  Time elapsed: 0.031 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "com.rev.app.entity.Company.getName()" because "company" is null
+	at com.rev.app.service.UserServiceImplTest.testRegisterUser_EmployerRole_SavedCorrectly(UserServiceImplTest.java:194)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   UserServiceImplTest.testRegisterUser_EmployerRole_SavedCorrectly:194 ╗ NullPointer
+[INFO] 
+[ERROR] Tests run: 66, Failures: 0, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.045 s
+[INFO] Finished at: 2026-02-24T18:31:58+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project REVHIRE_P2: There are test failures.
+[ERROR] 
+[ERROR] Please refer to E:\p2222222222\REVHIRE_P2\target\surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

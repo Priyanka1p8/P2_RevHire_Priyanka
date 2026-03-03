@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Applicants - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/employer/jobs}" class="nav-link active">My Jobs</a>
+                <a th:href="@{/employer/jobs/new}" class="nav-link">Post Job</a>
+                <a th:href="@{/employer/profile}" class="nav-link">Profile</a>
+                <a th:href="@{/employer/notifications}" class="nav-link">Notifications</a>
+                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <h1 class="page-title">Applicants for: <span th:text="${job.title}">Job</span></h1>
+        <div th:if="${param.updated}" class="alert alert-success">Status updated successfully!</div>
+        <div th:if="${param.bulk_updated}" class="alert alert-success">Bulk status updated successfully!</div>
+        <div th:if="${error}" class="alert alert-error" th:text="${error}"></div>
+
+
+        <form th:action="@{/employer/jobs/{jobId}/applicants(jobId=${job.id})}" method="get" class="search-bar">
+            <input type="text" name="keyword" th:value="${keyword}" placeholder="Name, skills, or experience..."
+                class="search-input" />
+            <select name="status" class="form-control" style="width: auto;">
+                <option value="">All Statuses</option>
+                <option value="APPLIED" th:selected="${status == 'APPLIED'}">Applied</option>
+                <option value="UNDER_REVIEW" th:selected="${status == 'UNDER_REVIEW'}">Under Review</option>
+                <option value="SHORTLISTED" th:selected="${status == 'SHORTLISTED'}">Shortlisted</option>
+                <option value="REJECTED" th:selected="${status == 'REJECTED'}">Rejected</option>
+            </select>
+            <input type="date" name="startDate" th:value="${startDate}" class="form-control" style="width: auto;" />
+            <div class="form-group" style="margin-bottom: 0; display: flex; align-items: center; gap: 0.5rem;">
+                <label style="margin:0; font-size: 0.8rem; white-space: nowrap;">Min Exp:</label>
+                <input type="number" name="minExp" th:value="${minExp}" class="form-control" style="width: 80px;"
+                    min="0" placeholder="0" />
+            </div>
+            <button type="submit" class="btn btn-primary">Filter</button>
+        </form>
+
+        <div th:if="${applications.isEmpty()}" class="empty-state">
+            <p th:if="${keyword == null && status == null}">No applications received yet for this position.</p>
+            <p th:if="${keyword != null || status != null}">No applications match your criteria.</p>
+        </div>
+
+
+        <form th:if="${!applications.isEmpty()}" id="bulkForm" th:action="@{/employer/applications/bulk-status}"
+            method="post" onsubmit="return validateBulkSelection()">
+            <input type="hidden" name="jobId" th:value="${job.id}" />
+            <div class="card" style="margin-bottom: 2rem; display: flex; align-items: flex-end; gap: 1rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Bulk Status Update</label>
+                    <select name="status" class="form-control" style="min-width: 150px;">
+                        <option value="UNDER_REVIEW">Under Review</option>
+                        <option value="SHORTLISTED">Shortlist</option>
+                        <option value="REJECTED">Reject</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 0; flex-grow: 1;">
+                    <label>Note for all selected</label>
+                    <input type="text" name="comment" class="form-control" placeholder="Optional comment..." />
+                </div>
+                <button type="submit" class="btn btn-primary">Bulk Update</button>
+            </div>
+        </form>
+
+        <div th:each="app : ${applications}" class="applicant-card" style="position: relative; padding-left: 4rem;">
+
+            <div style="position: absolute; left: 1.5rem; top: 1.5rem;">
+                <input type="checkbox" name="ids" th:value="${app.id}" form="bulkForm"
+                    style="width: 20px; height: 20px; cursor: pointer;" />
+            </div>
+
+            <div class="applicant-header">
+                <div>
+                    <h3 th:text="${app.seekerName}">Applicant Name</h3>
+                    <p>Applied: <span th:text="${#temporals.format(app.appliedDate, 'dd MMM yyyy')}">date</span></p>
+                </div>
+                <span class="status-badge" th:classappend="${app.status.name() == 'SHORTLISTED' ? 'status-green' :
+                                  app.status.name() == 'REJECTED' ? 'status-red' : 'status-blue'}"
+                    th:text="${app.status}">Status</span>
+            </div>
+
+            <div th:if="${app.coverLetter}" class="cover-letter">
+                <strong>Cover Letter:</strong>
+                <p th:text="${app.coverLetter}">Letter...</p>
+            </div>
+
+            <div th:if="${app.status.name() == 'WITHDRAWN' && app.withdrawReason != null}"
+                style="margin-top: 1rem; padding: 1rem; background: rgba(239, 68, 68, 0.05); border-left: 4px solid var(--danger); border-radius: 4px;">
+                <strong style="color: var(--danger);">Reason for Withdrawal:</strong>
+                <p th:text="${app.withdrawReason}"
+                    style="margin: 0.5rem 0 0 0; color: var(--text-body); font-style: italic;"></p>
+            </div>
+
+            <div style="margin-top: 1rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                <a th:href="@{/employer/resumes/{id}(id=${app.jobSeekerId})}" class="btn btn-outline btn-sm">View Full
+                    Resume</a>
+
+                <div th:if="${app.status.name() != 'WITHDRAWN'}"
+                    style="display: flex; gap: 0.5rem; align-items: center; padding: 0.5rem; border-radius: var(--radius); border: 1px solid var(--border);">
+                    <form th:action="@{/employer/applications/{id}/status(id=${app.id})}" method="post"
+                        style="display: inline-flex; gap: 0.5rem; align-items: center; margin:0;">
+                        <input type="hidden" name="jobId" th:value="${job.id}" />
+                        <select name="status" class="form-control form-control-sm" style="width: auto;">
+                            <option value="SHORTLISTED">Shortlist</option>
+                            <option value="REJECTED">Reject</option>
+                            <option value="UNDER_REVIEW">Under Review</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary btn-sm">Update Status</button>
+                    </form>
+                </div>
+
+
+                <form th:action="@{/employer/applications/{id}/notes(id=${app.id})}" method="post"
+                    style="display: inline-flex; gap: 0.5rem; flex-grow: 1; margin:0;">
+                    <input type="hidden" name="jobId" th:value="${job.id}" />
+                    <input type="text" name="note" class="form-control form-control-sm"
+                        placeholder="Add internal note..." required />
+                    <button type="submit" class="btn btn-outline btn-sm">Add Note</button>
+                </form>
+            </div>
+
+
+            <div th:if="${app.notes != null && !app.notes.isEmpty()}" class="notes-section">
+                <div class="notes-title">Internal Notes</div>
+                <div class="notes-list">
+                    <div th:each="note : ${app.notes}" class="note-item">
+                        <p class="note-content" th:text="${note.note}">Note content</p>
+                        <div class="note-meta">
+                            <span th:text="${#temporals.format(note.createdAt, 'dd MMM HH:mm')}">Date</span>
+                            <div class="note-actions">
+                                <button class="note-btn" onclick="toggleEditNote(this)">Edit</button>
+                                <form th:action="@{/employer/applications/notes/{id}/delete(id=${note.id})}"
+                                    method="post" style="display:inline;">
+                                    <input type="hidden" name="jobId" th:value="${job.id}" />
+                                    <button type="submit" class="note-btn delete"
+                                        onclick="return confirm('Delete this note?')">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <form th:action="@{/employer/applications/notes/{id}/update(id=${note.id})}" method="post"
+                            class="edit-note-form" style="display:none; margin-top: 0.5rem;">
+                            <input type="hidden" name="jobId" th:value="${job.id}" />
+                            <textarea name="note" class="form-control form-control-sm" rows="2"
+                                th:text="${note.note}"></textarea>
+                            <div style="margin-top:0.4rem; display:flex; gap:0.4rem;">
+                                <button type="submit" class="btn btn-primary btn-sm">Save</button>
+                                <button type="button" class="btn btn-outline btn-sm"
+                                    onclick="toggleEditNote(this)">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateBulkSelection() {
+            const checkboxes = document.querySelectorAll('input[name="ids"]:checked');
+            if (checkboxes.length === 0) {
+                alert('Please select at least one application to update.');
+                return false;
+            }
+            return confirm(`Update status for ${checkboxes.length} applications?`);
+        }
+
+        function toggleEditNote(btn) {
+            const item = btn.closest('.note-item');
+            const form = item.querySelector('.edit-note-form');
+            const content = item.querySelector('.note-content');
+            const meta = item.querySelector('.note-meta');
+
+            if (form.style.display === 'none') {
+                form.style.display = 'block';
+                content.style.display = 'none';
+                meta.style.display = 'none';
+            } else {
+                form.style.display = 'none';
+                content.style.display = 'block';
+                meta.style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+
+</html>

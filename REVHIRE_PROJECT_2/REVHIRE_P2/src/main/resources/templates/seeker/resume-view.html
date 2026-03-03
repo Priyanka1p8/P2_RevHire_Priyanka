@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>My Resume Preview - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/seeker/jobs}" class="nav-link">Browse Jobs</a>
+                <a th:href="@{/seeker/applications}" class="nav-link">Applications</a>
+                <a th:href="@{/seeker/saved-jobs}" class="nav-link">Saved Jobs</a>
+                <a th:href="@{/seeker/resume}" class="nav-link active">Resume</a>
+                <a th:href="@{/seeker/notifications}" class="nav-link">Notifications</a>
+                <a th:href="@{/seeker/profile}" class="nav-link">Profile</a>
+                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1 class="page-title">Resume Preview</h1>
+            <a th:href="@{/seeker/resume}" class="btn btn-outline btn-sm">Edit Resume</a>
+        </div>
+
+        <div class="card" th:object="${resume}">
+
+            <div style="border-bottom: 2px solid var(--surface-alt); padding-bottom: 2rem; margin-bottom: 2rem;">
+                <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;" th:text="*{seekerName}">Candidate
+                    Name</h2>
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                    <div style="color: var(--secondary); display: flex; align-items: center; gap: 0.5rem;">
+                        <span th:text="*{seekerEmail}">Email</span>
+                    </div>
+                    <div style="color: var(--secondary);" th:if="*{seekerPhone}">
+                        <strong>Ph:</strong> <span th:text="*{seekerPhone}">Phone</span>
+                    </div>
+                    <div style="color: var(--secondary);" th:if="*{seekerLocation}">
+                        <strong>Loc:</strong> <span th:text="*{seekerLocation}">Location</span>
+                    </div>
+                    <div th:if="*{seekerEmploymentStatus}">
+                        <span class="status-badge status-blue" th:text="*{seekerEmploymentStatus}">Status</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div th:if="*{objective}" class="resume-section" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary); margin-bottom: 0.75rem;">Professional Objective</h3>
+                <p style="white-space: pre-wrap; line-height: 1.6;" th:text="*{objective}"></p>
+            </div>
+
+            <div th:if="*{education}" class="resume-section" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary); margin-bottom: 0.75rem;">Education</h3>
+                <p style="white-space: pre-wrap; line-height: 1.6;" th:text="*{education}"></p>
+            </div>
+
+            <div th:if="*{experience}" class="resume-section" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary); margin-bottom: 0.75rem;">Work Experience</h3>
+                <p style="white-space: pre-wrap; line-height: 1.6;" th:text="*{experience}"></p>
+            </div>
+
+            <div th:if="*{skills}" class="resume-section" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary); margin-bottom: 0.75rem;">Skills</h3>
+                <p style="white-space: pre-wrap; line-height: 1.6;" th:text="*{skills}"></p>
+            </div>
+
+            <div th:if="*{projects}" class="resume-section" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary); margin-bottom: 0.75rem;">Projects</h3>
+                <p style="white-space: pre-wrap; line-height: 1.6;" th:text="*{projects}"></p>
+            </div>
+
+            <div th:if="*{certifications}" class="resume-section" style="margin-bottom: 2rem;">
+                <h3 style="color: var(--primary); margin-bottom: 0.75rem;">Certifications</h3>
+                <p style="white-space: pre-wrap; line-height: 1.6;" th:text="*{certifications}"></p>
+            </div>
+
+
+            <div th:if="*{fileName != null}"
+                style="margin-top: 3rem; padding: 1.5rem; background: var(--surface-alt); border-radius: 12px; border: 1px dashed var(--border);">
+                <h3 style="margin-bottom: 0.5rem;">Attached Resume Document</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+                    You have uploaded a file: <strong th:text="*{fileName}">resume.pdf</strong>
+                </p>
+                <a th:href="@{/seeker/resume/download(id=*{jobSeekerId})}" class="btn btn-secondary btn-sm">Download
+                    File</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

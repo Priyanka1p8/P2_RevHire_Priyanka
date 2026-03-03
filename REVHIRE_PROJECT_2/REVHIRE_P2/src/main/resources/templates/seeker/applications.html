@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>My Applications - RevHire</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a th:href="@{/}">RevHire</a></div>
+            <div class="nav-links">
+                <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
+                <a th:href="@{/seeker/jobs}" class="nav-link">Browse Jobs</a>
+                <a th:href="@{/seeker/applications}" class="nav-link active">Applications</a>
+                <a th:href="@{/seeker/saved-jobs}" class="nav-link">Saved Jobs</a>
+                <a th:href="@{/seeker/resume}" class="nav-link">Resume</a>
+                <a th:href="@{/seeker/notifications}" class="nav-link">Notifications</a>
+                <a th:href="@{/seeker/profile}" class="nav-link">Profile</a>
+                <a th:href="@{/logout}" class="btn btn-outline">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="page-container">
+        <h1 class="page-title">My Applications</h1>
+        <div th:if="${param.applied}" class="alert alert-success">Application submitted successfully!</div>
+        <div th:if="${param.withdrawn}" class="alert alert-success">Application withdrawn.</div>
+
+        <div th:if="${applications.isEmpty()}" class="empty-state">
+            <p>You haven't applied to any jobs yet. <a th:href="@{/seeker/jobs}">Browse Jobs →</a></p>
+        </div>
+
+        <div class="table-container" th:if="${!applications.isEmpty()}">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Job Title</th>
+                        <th>Company</th>
+                        <th>Applied On</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="app : ${applications}">
+                        <td th:text="${app.jobTitle}">Job Title</td>
+                        <td th:text="${app.companyName}">Company</td>
+                        <td th:text="${#temporals.format(app.appliedDate, 'dd MMM yyyy')}">Date</td>
+                        <td>
+                            <span class="status-badge" th:classappend="${app.status.name() == 'SHORTLISTED' ? 'status-green' :
+                                              app.status.name() == 'REJECTED' ? 'status-red' :
+                                              app.status.name() == 'WITHDRAWN' ? 'status-grey' : 'status-blue'}"
+                                th:text="${app.status}">Status</span>
+                        </td>
+                        <td>
+                            <button th:if="${app.status.name() != 'WITHDRAWN' && app.status.name() != 'REJECTED'}"
+                                onclick="showWithdrawModal(this)" th:data-appid="${app.id}"
+                                class="btn btn-danger btn-sm">Withdraw</button>
+                            <span th:if="${app.status.name() == 'WITHDRAWN' || app.status.name() == 'REJECTED'}"
+                                class="text-muted">—</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div id="withdrawModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h3>Withdraw Application</h3>
+            <p>Are you sure you want to withdraw this application?</p>
+            <form id="withdrawForm" method="post">
+                <div class="form-group">
+                    <label>Reason (Optional)</label>
+                    <textarea name="reason" class="form-control" rows="3"
+                        placeholder="Briefly explain your reason..."></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" onclick="closeModal()" class="btn btn-outline">Cancel</button>
+                    <button type="submit" class="btn btn-danger">Confirm Withdraw</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showWithdrawModal(btn) {
+            const appId = btn.getAttribute('data-appid');
+            document.getElementById('withdrawForm').action = '/seeker/applications/' + appId + '/withdraw';
+            document.getElementById('withdrawModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('withdrawModal').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
